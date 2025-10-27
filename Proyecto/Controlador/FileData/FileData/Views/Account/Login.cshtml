@@ -1,0 +1,217 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/Estilos/Estilos.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-container">
+            <h2>Validación de Acceso</h2>
+
+            <!-- ======= FORMULARIO DE LOGIN ======= -->
+            <form id="formLogin" asp-action="Login" asp-controller="Account" method="post">
+                <div class="login-grid">
+                    <div class="login-box">
+                        <label for="usuario">ID de Empleado</label>
+                        <input type="text" id="usuario" name="usuario" placeholder="Ej. 001245" required
+                               value="@(ViewBag.UsuarioInput ?? "")" />
+
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required
+                               value="@(ViewBag.PasswordInput ?? "")" />
+                    </div>
+
+                    <div class="validate-box">
+                        <button type="submit" name="accion" value="validar" class="btn-validar">Validar</button>
+                        <button type="submit" name="accion" value="acceder" class="btn-acceder">Acceder</button>
+                        <a href="#" id="linkRecuperar" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                    </div>
+                </div>
+            </form>
+
+            <!-- ======= SECCIÓN RECUPERACIÓN DE CONTRASEÑA ======= -->
+            <div id="recuperarContainer" style="display:none;">
+                <div class="login-box">
+                    <label for="correoRecuperacion">Correo electrónico registrado</label>
+                    <input type="email" id="correoRecuperacion" placeholder="ejemplo@correo.com" required />
+                    <button id="btnEnviarCodigo" class="btn-validar">Enviar código</button>
+                </div>
+
+                <div class="login-box" id="codigoBox" style="display:none;">
+                    <label for="codigoVerificacion">Código de verificación</label>
+                    <input type="text" id="codigoVerificacion" placeholder="Ingresa el código recibido" required />
+                    <button id="btnVerificarCodigo" class="btn-validar">Verificar código</button>
+                </div>
+
+                <div class="login-box" id="nuevaContraBox" style="display:none;">
+                    <label for="nuevaContrasena">Nueva contraseña</label>
+                    <input type="password" id="nuevaContrasena" placeholder="Nueva contraseña" required />
+                    <button id="btnCambiarContrasena" class="btn-validar">Cambiar contraseña</button>
+                </div>
+
+                <div class="extra-info" id="infoRecuperacion"></div>
+                <button id="btnVolverLogin" class="btn-acceder" style="margin-top:1rem;">Volver al Login</button>
+            </div>
+
+            <!-- ======= INFORMACIÓN EXTRA ======= -->
+            <div class="extra-info" id="infoLogin">
+                <p>
+                    <strong>Usuario:</strong>
+                    <span style="margin-left:5px;">@(ViewBag.NombreCompleto ?? "—")</span>
+                </p>
+                <p>
+                    <strong>Cargo:</strong>
+                    <span style="margin-left:5px;">@(ViewBag.Cargo ?? "—")</span>
+                </p>
+                <div class="info-box">
+                    @if (ViewBag.NombreCompleto != null)
+                    {
+                        <span>Los datos del empleado han sido validados correctamente.</span>
+                    }
+                    else
+                    {
+                        <span>Los datos del empleado aparecerán aquí después de una validación exitosa.</span>
+                    }
+                </div>
+            </div>
+
+            <!-- ======= BOTÓN PARA CREAR USUARIO ======= -->
+            <button class="btn-crear">Crear usuario</button>
+
+            <!-- ======= SECCIÓN CREAR USUARIO ======= -->
+            <div id="crearUsuarioContainer" style="display:none;">
+                <div class="login-box">
+                    <label for="comboEmpleados">Selecciona Empleado</label>
+                    <select id="comboEmpleados" required></select>
+
+                    <label for="cargoUsuario">Cargo</label>
+                    <input type="text" id="cargoUsuario" placeholder="Ej. Cajero, Administrador..." required />
+
+                    <label for="contrasenaUsuario">Contraseña</label>
+                    <input type="password" id="contrasenaUsuario" placeholder="Contraseña segura" required />
+
+                    <label for="codigoAdmin">Código de administrador</label>
+                    <input type="password" id="codigoAdmin" placeholder="Código de validación" required />
+
+                    <button id="btnGuardarUsuario" class="btn-validar">Guardar Usuario</button>
+                    <button id="btnVolverLogin2" class="btn-acceder" style="margin-top:1rem;">Volver al Login</button>
+                </div>
+
+                <div class="extra-info" id="infoCrearUsuario"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // ======== Recuperación de contraseña ========
+            $("#linkRecuperar").click(function (e) {
+                e.preventDefault();
+                $("#formLogin, #infoLogin, .btn-crear").hide();
+                $("#recuperarContainer").fadeIn();
+            });
+
+            $("#btnVolverLogin").click(function () {
+                $("#recuperarContainer").hide();
+                $("#formLogin, #infoLogin, .btn-crear").fadeIn();
+            });
+
+            $("#btnEnviarCodigo").click(function () {
+                let correo = $("#correoRecuperacion").val().trim();
+                if (correo === "") return alert("Por favor, ingresa tu correo.");
+
+                $("#infoRecuperacion").html("Enviando código...");
+                $.post("/Account/EnviarCodigo", { correo: correo }, function (res) {
+                    $("#infoRecuperacion").html(res.message);
+                    if (res.success) {
+                        $("#codigoBox").fadeIn();
+                        $("#correoRecuperacion, #btnEnviarCodigo").prop("disabled", true);
+                    }
+                });
+            });
+
+            $("#btnVerificarCodigo").click(function () {
+                let correo = $("#correoRecuperacion").val().trim();
+                let codigo = $("#codigoVerificacion").val().trim();
+                if (codigo === "") return alert("Ingresa el código recibido.");
+
+                $("#infoRecuperacion").html("Verificando...");
+                $.post("/Account/VerificarCodigo", { correo: correo, codigo: codigo }, function (res) {
+                    $("#infoRecuperacion").html(res.message);
+                    if (res.success) {
+                        $("#nuevaContraBox").fadeIn();
+                        $("#codigoVerificacion, #btnVerificarCodigo").prop("disabled", true);
+                    }
+                });
+            });
+
+            $("#btnCambiarContrasena").click(function () {
+                let correo = $("#correoRecuperacion").val().trim();
+                let nuevaContrasena = $("#nuevaContrasena").val().trim();
+                if (nuevaContrasena === "") return alert("Ingresa una nueva contraseña.");
+
+                $("#infoRecuperacion").html("Actualizando contraseña...");
+                $.post("/Account/CambiarContrasena", { correo: correo, nuevaContrasena: nuevaContrasena }, function (res) {
+                    $("#infoRecuperacion").html(res.message);
+                    if (res.success) {
+                        $("#btnCambiarContrasena").prop("disabled", true);
+                        setTimeout(() => { $("#btnVolverLogin").click(); }, 3000);
+                    }
+                });
+            });
+
+            // ======== Crear nuevo usuario ========
+            $(".btn-crear").click(function () {
+                $("#formLogin, #infoLogin, #recuperarContainer, .btn-crear").hide();
+                $("#crearUsuarioContainer").fadeIn();
+
+                // Cargar empleados
+                $.get("/Account/ObtenerEmpleados", function (data) {
+                    $("#comboEmpleados").empty().append('<option value="">-- Selecciona un empleado --</option>');
+                    data.forEach(e => {
+                        $("#comboEmpleados").append(`<option value="${e.idEmpleado}" data-dni="${e.dni}">${e.apellidos}</option>`);
+                    });
+                });
+            });
+
+            $("#btnVolverLogin2").click(function () {
+                $("#crearUsuarioContainer").hide();
+                $("#formLogin, #infoLogin, .btn-crear").fadeIn();
+            });
+
+            $("#btnGuardarUsuario").click(function () {
+                let idEmpleado = $("#comboEmpleados").val();
+                let contrasena = $("#contrasenaUsuario").val().trim();
+                let cargo = $("#cargoUsuario").val().trim();
+                let codigoAdmin = $("#codigoAdmin").val().trim();
+
+                if (!idEmpleado || !contrasena || !cargo || !codigoAdmin)
+                    return alert("Por favor completa todos los campos.");
+
+                $("#infoCrearUsuario").html("Creando usuario...");
+
+                $.post("/Account/CrearUsuario",
+                    { idEmpleado: idEmpleado, contrasena: contrasena, cargo: cargo, codigoAdmin: codigoAdmin },
+                    function (res) {
+                        $("#infoCrearUsuario").html(res.message);
+                        if (res.success) {
+                            $("#comboEmpleados, #cargoUsuario, #contrasenaUsuario, #codigoAdmin").prop("disabled", true);
+                            $("#btnGuardarUsuario").prop("disabled", true);
+                            setTimeout(() => $("#btnVolverLogin2").click(), 2500);
+                        }
+                    }
+                );
+            });
+        });
+    </script>
+</body>
+</html>
