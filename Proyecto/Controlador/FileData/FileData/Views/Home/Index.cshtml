@@ -21,7 +21,7 @@
             <a href="#" class="menu-item" id="btn-inicio">Inicio</a>
             <a href="#" class="menu-item" id="btn-listar">Listar Empleados</a>
             <a href="#" class="menu-item">Reportes</a>
-            <a href="#" class="menu-item">Configuración</a>
+            <a href="#" class="menu-item" id="btn-configurar">Regsitrar Empleado</a>
             <a href="#" class="menu-item">Salir</a>
         </nav>
     </aside>
@@ -52,6 +52,25 @@
             });
         });
 
+
+          // Botón: Configuración -> Registrar Empleado
+        $("#btn-configurar").click(function (e) {
+        e.preventDefault();
+
+        $.ajax({
+            url: '/Home/RegistrarEmpleado', // usa este path exacto
+            type: 'GET',
+            success: function (result) {
+                $("#dashboard-content").html(result);
+            },
+            error: function () {
+                $("#dashboard-content").html("<p style='color:red;'>Error al cargar la vista de configuración.</p>");
+            }
+        });
+    });
+
+
+
         // Botón: Inicio (restaurar contenido original del dashboard)
         $("#btn-inicio").click(function (e) {
             e.preventDefault();
@@ -62,3 +81,5 @@
         });
     });
 </script>
+
+
