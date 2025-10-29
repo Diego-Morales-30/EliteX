@@ -1,57 +1,65 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\",
+  "WorkspaceRootPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto\\controlador\\filedata\\filedata\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto\\controlador\\filedata\\filedata\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto\\controlador\\filedata\\filedata\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto\\controlador\\filedata\\filedata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto\\controlador\\filedata\\filedata\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto\\controlador\\filedata\\filedata\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto\\controlador\\filedata\\filedata\\models\\bddatafilecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\models\\bddatafilecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto\\controlador\\filedata\\filedata\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto\\controlador\\filedata\\filedata\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\menuazul.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\menuazul.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\menuazul.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\menuazul.css||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\models\\bddatafilecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\models\\bddatafilecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto\\controlador\\filedata\\filedata\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto\\controlador\\filedata\\filedata\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\diego\\onedrive\\escritorio\\proyecto_elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
@@ -62,28 +70,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "MenuAzul.css",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\MenuAzul.css",
+              "RelativeDocumentMoniker": "FileData\\wwwroot\\Estilos\\MenuAzul.css",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\MenuAzul.css",
+              "RelativeToolTip": "FileData\\wwwroot\\Estilos\\MenuAzul.css",
+              "ViewState": "AgIAADwAAAAAAAAAAAAqwEcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-29T03:39:49.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MenuAzul.css",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\MenuAzul.css",
+              "RelativeDocumentMoniker": "FileData\\wwwroot\\Estilos\\MenuAzul.css",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\MenuAzul.css",
+              "RelativeToolTip": "FileData\\wwwroot\\Estilos\\MenuAzul.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-29T03:32:44.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Account\\Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "FileData\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Account\\Login.cshtml",
               "RelativeToolTip": "FileData\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAANkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-02T22:10:07.497Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Program.cs",
               "RelativeDocumentMoniker": "FileData\\Program.cs",
-              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Program.cs",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Program.cs",
               "RelativeToolTip": "FileData\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -91,11 +125,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "BdDataFileContext.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Models\\BdDataFileContext.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\BdDataFileContext.cs",
               "RelativeDocumentMoniker": "FileData\\Models\\BdDataFileContext.cs",
-              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Models\\BdDataFileContext.cs",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\BdDataFileContext.cs",
               "RelativeToolTip": "FileData\\Models\\BdDataFileContext.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAgwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -103,24 +137,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "FileData\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Usuario.cs",
               "RelativeToolTip": "FileData\\Models\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T22:47:52.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T22:47:52.316Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\appsettings.Development.json",
               "RelativeDocumentMoniker": "FileData\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\appsettings.Development.json",
               "RelativeToolTip": "FileData\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -128,37 +161,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\appsettings.json",
               "RelativeDocumentMoniker": "FileData\\appsettings.json",
-              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\appsettings.json",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\appsettings.json",
               "RelativeToolTip": "FileData\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-02T22:55:01.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T22:55:01.858Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "FileData\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\AccountController.cs",
               "RelativeToolTip": "FileData\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAJgAAAAAAAAAAAAAAKMAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwDIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-02T22:57:39.068Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "FileData\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\HomeController.cs",
               "RelativeToolTip": "FileData\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -166,23 +198,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Estilos.css",
-              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\Estilos.css",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\Estilos.css",
               "RelativeDocumentMoniker": "FileData\\wwwroot\\Estilos\\Estilos.css",
-              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\Estilos.css",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\Estilos.css",
               "RelativeToolTip": "FileData\\wwwroot\\Estilos\\Estilos.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAAwAYBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-10-02T23:52:03.275Z"
+              "WhenOpened": "2025-10-02T23:52:03.275Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Empleado.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Empleado.cs",
               "RelativeDocumentMoniker": "FileData\\Models\\Empleado.cs",
-              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Empleado.cs",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Empleado.cs",
               "RelativeToolTip": "FileData\\Models\\Empleado.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -190,23 +223,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "FileData\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "FileData\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-02T23:25:44.344Z"
+              "WhenOpened": "2025-10-02T23:25:44.344Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Models\\ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "FileData\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\ErrorViewModel.cs",
               "RelativeToolTip": "FileData\\Models\\ErrorViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -214,11 +248,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\js\\site.js",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "FileData\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\js\\site.js",
               "RelativeToolTip": "FileData\\wwwroot\\js\\site.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",

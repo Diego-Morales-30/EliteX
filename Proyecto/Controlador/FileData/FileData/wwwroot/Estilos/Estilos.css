@@ -136,3 +136,127 @@
     .btn-crear:hover {
         background: #666;
     }
+
+
+/* ===== CONFIGURACIÓN GENERAL ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0d0d0d;
+    color: #f5f5f5;
+    height: 100vh;
+    display: flex;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.dashboard-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 250px; /* contenido + barra lateral */
+    grid-template-rows: 70px 1fr;
+    grid-template-areas:
+        "topbar sidebar"
+        "main sidebar";
+    width: 100%;
+    height: 100vh;
+}
+
+/* ===== BARRA SUPERIOR ===== */
+.topbar {
+    grid-area: topbar;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-shadow: 0 0 20px rgba(0, 119, 255, 0.3);
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #0099ff;
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu-btn {
+    background: #262626;
+    color: #f5f5f5;
+    border: 1px solid #0099ff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .menu-btn:hover {
+        background: #0099ff;
+        color: #fff;
+    }
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.main-content {
+    grid-area: main;
+    background: #121212;
+    padding: 2rem;
+    border-top: 1px solid #333;
+    overflow-y: auto;
+}
+
+.dashboard-box {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 0 25px rgba(0, 119, 255, 0.2);
+}
+
+    .dashboard-box h2 {
+        color: #0099ff;
+        margin-bottom: 1rem;
+    }
+
+/* ===== BARRA LATERAL ===== */
+.sidebar {
+    grid-area: sidebar;
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    border-left: 1px solid #333;
+    box-shadow: inset 0 0 20px rgba(0, 119, 255, 0.2);
+}
+
+.user-info {
+    text-align: left;
+    width: 100%;
+    background: #262626;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #f5deb3;
+}
+
+    .user-info strong {
+        color: #0099ff;
+    }
+
+/* ===== ANIMACIONES Y EFECTOS ===== */
+.dashboard-box, .sidebar, .topbar {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/uX3v3sn5nM=",
+  "dgSpecHash": "n3gwmJiqXXk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto\\Controlador\\FileData\\FileData\\FileData.csproj",
+  "projectFilePath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\FileData.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diego\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\diego\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

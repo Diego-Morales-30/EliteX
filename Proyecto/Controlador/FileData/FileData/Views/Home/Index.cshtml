@@ -1,5 +1,33 @@
 ﻿@{
-    ViewData["Title"] = "Inicio";
+    ViewData["Title"] = "Menú Principal - EliteX";
 }
 
-<h2>Bienvenido al sistema</h2>
+<link rel="stylesheet" href="~/Estilos/MenuAzul.css" />
+
+<div class="menu-container">
+    <header class="menu-header">
+        <div class="menu-logo">ELITEX</div>
+        <div class="user-info-header">
+            <p>
+                <strong>Nombre:</strong> Diego Morales
+                <span class="separator">|</span>
+                <strong>Rol:</strong> Administrador
+            </p>
+        </div>
+    </header>
+
+    <aside class="menu-sidebar">
+        <nav class="menu-nav-vertical">
+            <a href="#" class="menu-item">Inicio</a>
+            <a href="#" class="menu-item">Empleados</a>
+            <a href="#" class="menu-item">Reportes</a>
+            <a href="#" class="menu-item">Configuración</a>
+            <a href="#" class="menu-item">Salir</a>
+        </nav>
+    </aside>
+
+    <main class="menu-dashboard">
+        <h1>Dashboard</h1>
+        <p>Bienvenido al panel principal de EliteX.</p>
+    </main>
+</div>
