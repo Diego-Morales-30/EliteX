@@ -18,16 +18,47 @@
 
     <aside class="menu-sidebar">
         <nav class="menu-nav-vertical">
-            <a href="#" class="menu-item">Inicio</a>
-            <a href="#" class="menu-item">Empleados</a>
+            <a href="#" class="menu-item" id="btn-inicio">Inicio</a>
+            <a href="#" class="menu-item" id="btn-listar">Listar Empleados</a>
             <a href="#" class="menu-item">Reportes</a>
             <a href="#" class="menu-item">Configuración</a>
             <a href="#" class="menu-item">Salir</a>
         </nav>
     </aside>
 
-    <main class="menu-dashboard">
+    <main class="menu-dashboard" id="dashboard-content">
         <h1>Dashboard</h1>
         <p>Bienvenido al panel principal de EliteX.</p>
     </main>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        // Botón: Listar Empleados
+        $("#btn-listar").click(function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                url: '/Listar/ListarEmpleado', // Acción del controlador
+                type: 'GET',
+                success: function (result) {
+                    $("#dashboard-content").html(result);
+                },
+                error: function () {
+                    $("#dashboard-content").html("<p style='color:red;'>Error al cargar la lista de empleados.</p>");
+                }
+            });
+        });
+
+        // Botón: Inicio (restaurar contenido original del dashboard)
+        $("#btn-inicio").click(function (e) {
+            e.preventDefault();
+            $("#dashboard-content").html(`
+                <h1>Dashboard</h1>
+                <p>Bienvenido al panel principal de EliteX.</p>
+            `);
+        });
+    });
+</script>

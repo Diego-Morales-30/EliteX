@@ -1,0 +1,86 @@
+﻿/* ====== ESTILOS LISTADO EMPLEADOS CON SEPARADORES ====== */
+
+.tabla-container {
+    padding: 25px;
+    background-color: #0b0f1a;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 102, 255, 0.25);
+    animation: fadeIn 0.6s ease-in-out;
+    overflow-x: auto;
+}
+
+.titulo-lista {
+    color: #3399ff;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 22px;
+    border-left: 6px solid #3399ff;
+    padding-left: 12px;
+    text-shadow: 0 0 10px rgba(51, 153, 255, 0.4);
+}
+
+.tabla-empleados {
+    width: 100%;
+    border-collapse: collapse; /* Importante para mostrar líneas limpias */
+    color: #dce3f0;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+    .tabla-empleados thead th {
+        background: linear-gradient(90deg, #003b99, #0056d6);
+        color: #fff;
+        padding: 14px 12px;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        font-weight: 600;
+        border-bottom: 2px solid #007bff;
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+        .tabla-empleados thead th:last-child {
+            border-right: none;
+        }
+
+    .tabla-empleados tbody tr {
+        background-color: #121a2c;
+        transition: all 0.25s ease;
+    }
+
+        .tabla-empleados tbody tr:hover {
+            background-color: #1a2440;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
+        }
+
+    .tabla-empleados td {
+        padding: 14px 15px;
+        vertical-align: middle;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        border-right: 1px solid rgba(255, 255, 255, 0.1); /* separador vertical */
+    }
+
+        .tabla-empleados td:last-child {
+            border-right: none;
+        }
+
+    .tabla-empleados tbody tr td:first-child {
+        color: #4da3ff;
+        font-weight: 600;
+    }
+
+    .tabla-empleados tbody td {
+        color: #c9d5ee;
+    }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

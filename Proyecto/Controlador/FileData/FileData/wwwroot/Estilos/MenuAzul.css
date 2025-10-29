@@ -112,3 +112,77 @@
         transform: translateY(0);
     }
 }
+
+/* ====== ESTILOS LISTADO EMPLEADOS ====== */
+
+.tabla-container {
+    padding: 25px;
+    background-color: #0b0f1a;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 102, 255, 0.3);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.titulo-lista {
+    color: #007bff;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-left: 6px solid #007bff;
+    padding-left: 10px;
+}
+
+.tabla-empleados {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    color: #dce3f0;
+    background-color: #0f1624;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+    .tabla-empleados thead {
+        background: linear-gradient(90deg, #003b99, #0056d6);
+    }
+
+    .tabla-empleados th {
+        padding: 12px 10px;
+        text-align: left;
+        font-weight: 600;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .tabla-empleados tbody tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+        .tabla-empleados tbody tr:hover {
+            background-color: rgba(0, 123, 255, 0.12);
+            transform: scale(1.01);
+        }
+
+    .tabla-empleados td {
+        padding: 10px 12px;
+        color: #bfc9da;
+    }
+
+    .tabla-empleados tbody tr td:first-child {
+        color: #4da3ff;
+        font-weight: 600;
+    }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
