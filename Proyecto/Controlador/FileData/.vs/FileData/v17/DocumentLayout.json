@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\ADRIANI\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\adriani\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\adriani\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\adriani\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\registroempleado.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\registroempleado.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -17,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\adriani\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\adriani\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\adriani\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\menuazul.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\adriani\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\models\\bddatafilecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\models\\bddatafilecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\adriani\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\adriani\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\consultarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -94,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -102,19 +102,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ADRIANI\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "FileData\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\ADRIANI\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "FileData\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABcAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-02T23:25:44.344Z"
+              "WhenOpened": "2025-10-02T23:25:44.344Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Empleado.cs",
               "DocumentMoniker": "C:\\Users\\ADRIANI\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Empleado.cs",
               "RelativeDocumentMoniker": "FileData\\Models\\Empleado.cs",
@@ -126,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ADRIANI\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\appsettings.json",
               "RelativeDocumentMoniker": "FileData\\appsettings.json",
@@ -134,11 +135,12 @@
               "RelativeToolTip": "FileData\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-02T22:55:01.858Z"
+              "WhenOpened": "2025-10-02T22:55:01.858Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "RegistrarEmpleado.cshtml",
               "DocumentMoniker": "C:\\Users\\ADRIANI\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Empleado\\RegistrarEmpleado.cshtml",
               "RelativeDocumentMoniker": "FileData\\Views\\Empleado\\RegistrarEmpleado.cshtml",
@@ -150,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "BdDataFileContext.cs",
               "DocumentMoniker": "C:\\Users\\ADRIANI\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\BdDataFileContext.cs",
               "RelativeDocumentMoniker": "FileData\\Models\\BdDataFileContext.cs",
@@ -162,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "EmpleadoController.cs",
               "DocumentMoniker": "C:\\Users\\ADRIANI\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\EmpleadoController.cs",
               "RelativeDocumentMoniker": "FileData\\Controllers\\EmpleadoController.cs",
@@ -174,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ListarController.cs",
               "DocumentMoniker": "C:\\Users\\ADRIANI\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ListarController.cs",
               "RelativeDocumentMoniker": "FileData\\Controllers\\ListarController.cs",
@@ -186,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ListarEmpleado.cshtml",
               "DocumentMoniker": "C:\\Users\\ADRIANI\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\ListarEmpleado.cshtml",
               "RelativeDocumentMoniker": "FileData\\Views\\Home\\ListarEmpleado.cshtml",
@@ -198,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "RegistroEmpleado.css",
               "DocumentMoniker": "C:\\Users\\ADRIANI\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\RegistroEmpleado.css",
               "RelativeDocumentMoniker": "FileData\\wwwroot\\Estilos\\RegistroEmpleado.css",
@@ -211,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\ADRIANI\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "FileData\\Views\\Account\\Login.cshtml",
@@ -223,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MenuAzul.css",
               "DocumentMoniker": "C:\\Users\\ADRIANI\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\MenuAzul.css",
               "RelativeDocumentMoniker": "FileData\\wwwroot\\Estilos\\MenuAzul.css",
