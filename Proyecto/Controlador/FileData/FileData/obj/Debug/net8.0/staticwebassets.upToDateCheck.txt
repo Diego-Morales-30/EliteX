@@ -1,7 +1,7 @@
 wwwroot\Estilos\DashListar.css
 wwwroot\Estilos\Estilos.css
 wwwroot\Estilos\MenuAzul.css
-wwwroot\Estilos\RegistroDis.css
+wwwroot\Estilos\RegistroEmpleado.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css

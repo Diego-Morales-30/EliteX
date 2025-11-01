@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\FileData.csproj": {}
+    "C:\\Users\\ADRIANI\\Desktop\\ÑeliTEX\\Proyecto\\Controlador\\FileData\\FileData\\FileData.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\FileData.csproj": {
+    "C:\\Users\\ADRIANI\\Desktop\\ÑeliTEX\\Proyecto\\Controlador\\FileData\\FileData\\FileData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\FileData.csproj",
+        "projectUniqueName": "C:\\Users\\ADRIANI\\Desktop\\ÑeliTEX\\Proyecto\\Controlador\\FileData\\FileData\\FileData.csproj",
         "projectName": "FileData",
-        "projectPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\FileData.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\obj\\",
+        "projectPath": "C:\\Users\\ADRIANI\\Desktop\\ÑeliTEX\\Proyecto\\Controlador\\FileData\\FileData\\FileData.csproj",
+        "packagesPath": "C:\\Users\\ADRIANI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADRIANI\\Desktop\\ÑeliTEX\\Proyecto\\Controlador\\FileData\\FileData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADRIANI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

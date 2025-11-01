@@ -1,0 +1,98 @@
+﻿
+/* === ESTILO ELEGANTE REGISTRO EMPLEADO === */
+body {
+    background-color: #0f1117;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.registro-container {
+    max-width: 650px;
+    margin: 50px auto;
+    background-color: #0b0f1a;
+    border-radius: 20px;
+    padding: 40px 50px;
+    box-shadow: 0 0 25px rgba(0, 102, 255, 0.3);
+    animation: fadeIn 0.7s ease;
+}
+
+    .registro-container h2 {
+        color: #4da3ff;
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        border-bottom: 2px solid #007bff;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* === INPUT CON EFECTO NEÓN AZUL === */
+label {
+    color: #b0c4de;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: #101522;
+    border: 2px solid #1b2b45;
+    border-radius: 10px;
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+}
+
+/* === BOTÓN ELEGANTE === */
+button {
+    background: linear-gradient(90deg, #0044cc, #007bff);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+    letter-spacing: 0.5px;
+}
+
+    button:hover {
+        background: linear-gradient(90deg, #005cff, #00a2ff);
+        box-shadow: 0 0 20px rgba(0, 153, 255, 0.8);
+        transform: scale(1.03);
+    }
+
+/* === ANIMACIÓN DE ENTRADA === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<FileData.Models.Empleado>
+
+<link rel="stylesheet" href="~/Estilos/DashConsultar.css" />
+
+<div class="tabla-consultar-container">
+    <h1 class="titulo-consultar">🔎 Consultar Empleado</h1>
+
+    <input type="text" id="txtBuscar" class="input-buscar" placeholder="Ingrese ID o nombre completo" />
+    <button id="btnBuscar" class="btn-buscar">Buscar</button>
+
+    <div id="resultadoEmpleado" class="resultado-empleado">
+        <p>Ingrese un filtro y presione "Buscar" para ver los empleados.</p>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#btnBuscar").click(function () {
+            let filtro = $("#txtBuscar").val().trim();
+            if (filtro === "") return alert("Ingrese ID o nombre para buscar.");
+
+            $("#resultadoEmpleado").html("Buscando...");
+
+            $.post("/Consultar/BuscarEmpleado", { filtro: filtro }, function (res) {
+                $("#resultadoEmpleado").html(res); // ahora solo actualiza los resultados
+            });
+        });
+    });
+</script>

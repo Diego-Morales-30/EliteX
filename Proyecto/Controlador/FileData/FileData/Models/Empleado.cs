@@ -12,11 +12,12 @@ namespace FileData.Models
         public string Nombre { get; set; } = null!;
 
         [Required(ErrorMessage = "Los apellidos son obligatorios.")]
-        [StringLength(50, ErrorMessage = "Los apellidos no pueden superar los 50 caracteres.")]
+        [StringLength(100, ErrorMessage = "Los apellidos no pueden superar los 100 caracteres.")]
         public string Apellidos { get; set; } = null!;
 
         [Required(ErrorMessage = "La fecha de nacimiento es obligatoria.")]
-        public DateOnly FechaNacimiento { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime FechaNacimiento { get; set; }
 
         [Range(18, 99, ErrorMessage = "La edad debe estar entre 18 y 99 años.")]
         public int? Edad { get; set; }

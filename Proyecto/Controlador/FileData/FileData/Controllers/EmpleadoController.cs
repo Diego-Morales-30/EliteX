@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using FileData.Models;
-using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace FileData.Controllers
 {
@@ -22,43 +22,37 @@ namespace FileData.Controllers
 
         // POST: /Empleado/RegistrarEmpleado
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult RegistrarEmpleado(Empleado empleado)
+        public JsonResult RegistrarEmpleado(Empleado empleado)
         {
             if (!ModelState.IsValid)
             {
-                // ❌ Si hay errores de validación del modelo
-                return View(empleado);
+                return Json(new { success = false, message = "Datos inválidos." });
             }
 
-            // ⚠️ Verificar si ya existe empleado con mismo DNI o correo
             var existe = _context.Empleados
                 .Any(e => e.Dni == empleado.Dni || e.Email == empleado.Email);
 
             if (existe)
             {
-                ViewBag.Error = "El usuario ya se encuentra registrado.";
-                return View(empleado);
+                return Json(new { success = false, message = "El empleado ya está registrado." });
             }
 
             try
             {
-                // EF genera el Id automáticamente si es identidad
                 _context.Empleados.Add(empleado);
                 _context.SaveChanges();
 
-                ViewBag.Exito = "Empleado registrado correctamente.";
-                ModelState.Clear(); // Limpia el formulario
-
-                return View();
+                return Json(new { success = true, message = "Empleado registrado correctamente." });
             }
             catch (Exception ex)
             {
-                ViewBag.Error = $"Error al registrar empleado: {ex.Message}";
-                return View(empleado);
+                return Json(new { success = false, message = "Error: " + ex.Message });
             }
         }
     }
 }
+
+
+
 
 

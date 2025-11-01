@@ -20,7 +20,7 @@
         <nav class="menu-nav-vertical">
             <a href="#" class="menu-item" id="btn-inicio">Inicio</a>
             <a href="#" class="menu-item" id="btn-listar">Listar Empleados</a>
-            <a href="#" class="menu-item">Reportes</a>
+            <a href="#" class="menu-item" id="btn-consultar">Consultar Empleado</a>
             <a href="#" class="menu-item" id="btn-configurar">Regsitrar Empleado</a>
             <a href="#" class="menu-item">Salir</a>
         </nav>
@@ -36,7 +36,7 @@
 <script>
     $(document).ready(function () {
 
-        // Botón: Listar Empleados
+    // Botón: Listar Empleados
         $("#btn-listar").click(function (e) {
             e.preventDefault();
 
@@ -52,13 +52,27 @@
             });
         });
 
+    // Botón: Consultar Empleado
+                $("#btn-consultar").click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '/Consultar/ConsultarEmpleado',
+                type: 'GET',
+                success: function (result) {
+                    $("#dashboard-content").html(result);
+                },
+                error: function () {
+                    $("#dashboard-content").html("<p style='color:red;'>Error al cargar la consulta de empleados.</p>");
+                }
+            });
+        });
 
-          // Botón: Configuración -> Registrar Empleado
+    // Botón: Configuración -> Registrar Empleado
         $("#btn-configurar").click(function (e) {
         e.preventDefault();
 
         $.ajax({
-            url: '/Home/RegistrarEmpleado', // usa este path exacto
+            url: '/Empleado/RegistrarEmpleado', // usa este path exacto
             type: 'GET',
             success: function (result) {
                 $("#dashboard-content").html(result);
@@ -68,8 +82,6 @@
             }
         });
     });
-
-
 
         // Botón: Inicio (restaurar contenido original del dashboard)
         $("#btn-inicio").click(function (e) {

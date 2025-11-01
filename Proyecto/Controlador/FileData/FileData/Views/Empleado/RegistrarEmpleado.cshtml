@@ -1,0 +1,82 @@
+﻿@model FileData.Models.Empleado
+
+@{
+    ViewData["Title"] = "Registrar Empleado";
+}
+
+<!-- Vincula el nuevo diseño -->
+<link rel="stylesheet" href="@Url.Content("~/Estilos/RegistroEmpleado.css")" />
+
+<div class="registro-container">
+    <h2>Registrar Empleado</h2>
+
+    <form id="formRegistrarEmpleado">
+        <div>
+            <label>Nombre:</label>
+            <input name="Nombre" type="text" required />
+        </div>
+
+        <div>
+            <label>Apellidos:</label>
+            <input name="Apellidos" type="text" required />
+        </div>
+
+        <div>
+            <label>Fecha de nacimiento:</label>
+            <input name="FechaNacimiento" type="date" required />
+        </div>
+
+        <div>
+            <label>Edad:</label>
+            <input name="Edad" type="number" min="18" max="99" required />
+        </div>
+
+        <div>
+            <label>Estado civil:</label>
+            <input name="EstadoCivil" type="text" required />
+        </div>
+
+        <div>
+            <label>Email:</label>
+            <input name="Email" type="email" required />
+        </div>
+
+        <div>
+            <label>Teléfono:</label>
+            <input name="Telefono" type="text" required />
+        </div>
+
+        <div>
+            <label>DNI:</label>
+            <input name="Dni" type="text" maxlength="8" required />
+        </div>
+
+        <button type="submit">Registrar Empleado</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $("#formRegistrarEmpleado").submit(function (e) {
+        e.preventDefault();
+
+        $.ajax({
+            url: '/Empleado/RegistrarEmpleado',
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function (response) {
+                alert(response.message);
+                if (response.success) {
+                    $("#formRegistrarEmpleado")[0].reset();
+                }
+            },
+            error: function () {
+                alert("Error al conectar con el servidor.");
+            }
+        });
+    });
+</script>
+
+
+
