@@ -13,8 +13,167 @@
     </div>
 </div>
 
+<!-- Modal/Panel interno para Actualizar (inicia oculto) -->
+<div id="modalActualizar" class="modal-actualizar" style="display:none;">
+    <div class="modal-content-actualizar">
+        <div class="modal-header-actualizar">
+            <h2>✏️ Actualizar Empleado</h2>
+            <button id="cerrarModal" class="btn-cerrar-modal" title="Cerrar">✖</button>
+        </div>
+
+        <form id="formActualizarInline">
+            <input type="hidden" name="IdEmpleado" id="IdEmpleado" />
+
+            <div class="campo">
+                <label for="Nombre">Nombre</label>
+                <input name="Nombre" id="Nombre" type="text" required />
+            </div>
+
+            <div class="campo">
+                <label for="Apellidos">Apellidos</label>
+                <input name="Apellidos" id="Apellidos" type="text" required />
+            </div>
+
+            <div class="campo">
+                <label for="FechaNacimiento">Fecha de Nacimiento</label>
+                <input name="FechaNacimiento" id="FechaNacimiento" type="date" />
+            </div>
+
+            <div class="campo">
+                <label for="Edad">Edad</label>
+                <input name="Edad" id="Edad" type="number" min="0" />
+            </div>
+
+            <div class="campo">
+                <label for="EstadoCivil">Estado Civil</label>
+                <input name="EstadoCivil" id="EstadoCivil" type="text" />
+            </div>
+
+            <div class="campo">
+                <label for="Email">Email</label>
+                <input name="Email" id="Email" type="email" />
+            </div>
+
+            <div class="campo">
+                <label for="Telefono">Teléfono</label>
+                <input name="Telefono" id="Telefono" type="text" />
+            </div>
+
+            <div class="campo">
+                <label for="Dni">DNI</label>
+                <input name="Dni" id="Dni" type="text" />
+            </div>
+
+            <div class="acciones-modal">
+                <button type="submit" class="btn-guardar-actualizar">Guardar</button>
+                <button type="button" id="btnCancelarModal" class="btn-cancelar-actualizar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    /* Estilos mínimos del modal para integrarlo visualmente */
+    .modal-actualizar {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(2,6,23,0.6);
+        z-index: 9999;
+        padding: 20px;
+    }
+
+    .modal-content-actualizar {
+        width: 760px;
+        max-width: 98%;
+        background: #0f1624;
+        border-radius: 12px;
+        padding: 22px;
+        box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+        color: #e6eef8;
+    }
+
+    .modal-header-actualizar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .btn-cerrar-modal {
+        background: transparent;
+        border: none;
+        color: #cfe3ff;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .campo {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+        .campo label {
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #d6e7ff;
+        }
+
+        .campo input {
+            padding: 8px 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.02);
+            color: #e6eef8;
+        }
+
+    .acciones-modal {
+        margin-top: 12px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .btn-guardar-actualizar {
+        padding: 10px 14px;
+        border-radius: 8px;
+        background: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+    }
+
+    .btn-cancelar-actualizar {
+        padding: 10px 14px;
+        border-radius: 8px;
+        background: transparent;
+        color: #cfe3ff;
+        border: 1px solid rgba(255,255,255,0.04);
+        cursor: pointer;
+    }
+
+    /* Botón "Actualizar" en cada bloque de resultado (si acaso no está en tu CSS) */
+    .btn-actualizar {
+        padding: 6px 10px;
+        border-radius: 8px;
+        background: transparent;
+        color: #cfe3ff;
+        border: 1px solid rgba(255,255,255,0.08);
+        cursor: pointer;
+        font-weight: 700;
+        margin-left: 12px;
+    }
+</style>
+
 <script>
     $(document).ready(function () {
+        // Guardar el HTML inicial del contenedor para poder restaurarlo al cancelar
+        var htmlInicial = $("#resultadoEmpleado").html();
+
         $("#btnBuscar").click(function () {
             let filtro = $("#txtBuscar").val().trim();
             if (filtro === "") return alert("Ingrese ID o nombre para buscar.");
@@ -22,8 +181,163 @@
             $("#resultadoEmpleado").html("Buscando...");
 
             $.post("/Consultar/BuscarEmpleado", { filtro: filtro }, function (res) {
-                $("#resultadoEmpleado").html(res); // ahora solo actualiza los resultados
+                $("#resultadoEmpleado").html(res);
+                // Añadimos (si no están) los botones actualizar
+                agregarBotonesActualizar();
+            }).fail(function () {
+                $("#resultadoEmpleado").html("<p>Error al buscar empleado.</p>");
             });
         });
+
+        // Función que agrega botones y los vincula
+        function agregarBotonesActualizar() {
+            // Buscamos bloques de empleado: heurística por h3
+            $("#resultadoEmpleado").find("div").each(function () {
+                var $block = $(this);
+                if ($block.find("h3").length === 0) return;
+                if ($block.find(".btn-actualizar").length) return; // ya tiene
+
+                var id = null;
+                // Extraer ID desde párrafo que contenga "ID" (insensible)
+                $block.find("p").each(function () {
+                    var t = $(this).text().replace(/\s+/g, " ").trim();
+                    var m = t.match(/(?:\bID\b|\bId\b|identificador|identifica|id)\s*[:\s]*([0-9]+)/i);
+                    if (m && m[1]) {
+                        id = m[1];
+                        return false;
+                    }
+                });
+                if (!id) {
+                    // fallback: primer número en el bloque
+                    var fallback = $block.text().match(/\b([0-9]{1,6})\b/);
+                    if (fallback) id = fallback[1];
+                }
+                if (!id) return;
+
+                var $btn = $('<button type="button" class="btn-actualizar">Actualizar</button>');
+                $btn.on("click", function () {
+                    abrirModalConDatosDesdeBloque($block, id);
+                });
+
+                // Insertar al lado del h3 o al final del bloque
+                if ($block.find("h3").length) {
+                    var $h3 = $block.find("h3").first();
+                    if (!$h3.parent().hasClass("h3-with-btn")) {
+                        $h3.wrap('<div class="h3-with-btn" style="display:flex;align-items:center;justify-content:space-between;"></div>');
+                    }
+                    $h3.parent().append($btn);
+                } else {
+                    $block.append($btn);
+                }
+            });
+        }
+
+        // Abre modal y rellena campos extrayendo los valores desde el bloque HTML
+        function abrirModalConDatosDesdeBloque($block, id) {
+            // Poner id
+            $("#IdEmpleado").val(id);
+
+            // Nombre desde h3 (nombre completo)
+            var nombreCompleto = $block.find("h3").first().text().trim();
+            // Si quieres separar Nombre/Apellidos por espacio (primera palabra nombre y resto apellidos)
+            var partes = nombreCompleto.split(" ");
+            if (partes.length >= 2) {
+                $("#Nombre").val(partes[0]);
+                $("#Apellidos").val(partes.slice(1).join(" "));
+            } else {
+                $("#Nombre").val(nombreCompleto);
+                $("#Apellidos").val("");
+            }
+
+            // Buscamos los <p> para extraer campos por etiqueta
+            var texto = "";
+            $block.find("p").each(function () {
+                var t = $(this).text().replace(/\s+/g, " ").trim();
+                texto += t + "||";
+                // extraemos por prefijo
+                if (/fecha nacimiento/i.test(t)) {
+                    // extraer números día mes año
+                    var m = t.match(/(\d{1,2})\D+(\d{1,2})\D+(\d{2,4})/);
+                    if (m) {
+                        var dd = m[1].padStart(2, '0');
+                        var mm = m[2].padStart(2, '0');
+                        var yyyy = m[3].length === 2 ? ('20' + m[3]) : m[3];
+                        $("#FechaNacimiento").val(yyyy + "-" + mm + "-" + dd);
+                    } else {
+                        // si no detecta, limpia
+                        $("#FechaNacimiento").val("");
+                    }
+                } else if (/edad/i.test(t)) {
+                    var m2 = t.match(/([0-9]{1,3})/);
+                    $("#Edad").val(m2 ? m2[1] : "");
+                } else if (/estado civil/i.test(t)) {
+                    var v = t.split(":");
+                    $("#EstadoCivil").val(v.length > 1 ? v.slice(1).join(":").trim() : "");
+                } else if (/email/i.test(t)) {
+                    var v = t.split(":");
+                    $("#Email").val(v.length > 1 ? v.slice(1).join(":").trim() : "");
+                } else if (/tel[eé]fono/i.test(t)) {
+                    var v = t.split(":");
+                    $("#Telefono").val(v.length > 1 ? v.slice(1).join(":").trim() : "");
+                } else if (/dni/i.test(t)) {
+                    var v = t.split(":");
+                    $("#Dni").val(v.length > 1 ? v.slice(1).join(":").trim() : "");
+                } else if (/id[:\s]/i.test(t)) {
+                    // ya lo tenemos en hidden
+                }
+            });
+
+            // Mostrar modal
+            $("#modalActualizar").fadeIn(150);
+            // scroll al modal (opcional)
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Cerrar modal: limpiar y restaurar vista inicial
+        function cerrarModalYRestaurar() {
+            $("#modalActualizar").fadeOut(120);
+            // vaciar campos
+            $("#formActualizarInline")[0].reset();
+            // restaurar la vista de consultar a su estado inicial
+            $("#txtBuscar").val("");
+            $("#resultadoEmpleado").html('<p>Ingrese un filtro y presione "Buscar" para ver los empleados.</p>');
+        }
+
+        // Botones cancelar/cerrar
+        $("#btnCancelarModal, #cerrarModal").on("click", function () {
+            cerrarModalYRestaurar();
+        });
+
+        // Envío por AJAX del formulario inline
+        $("#formActualizarInline").on("submit", function (e) {
+            e.preventDefault();
+            var data = $(this).serialize(); // envia como application/x-www-form-urlencoded
+
+            $(".btn-guardar-actualizar").prop("disabled", true);
+
+            $.ajax({
+                url: '/Actualizar/ActualizarEmpleadoAjax',
+                method: 'POST',
+                data: data,
+                success: function (res) {
+                    if (res && res.success) {
+                        alert(res.message || "Actualizado correctamente.");
+                        // cerrar modal y limpiar resultado
+                        cerrarModalYRestaurar();
+                    } else {
+                        alert(res.message || "No se pudo actualizar. Revise los datos.");
+                    }
+                },
+                error: function () {
+                    alert("Error al intentar actualizar. Reintente.");
+                },
+                complete: function () {
+                    $(".btn-guardar-actualizar").prop("disabled", false);
+                }
+            });
+        });
+
+        // Si ya había resultados inyectados por la carga inicial, añadimos botones
+        agregarBotonesActualizar();
     });
 </script>

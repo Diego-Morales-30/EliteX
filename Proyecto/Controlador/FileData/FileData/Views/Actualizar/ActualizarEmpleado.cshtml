@@ -1,0 +1,90 @@
+@model FileData.Models.Empleado
+
+@{
+    ViewData["Title"] = "Actualizar Empleado";
+}
+
+/* Usamos el mismo CSS que usa RegistrarEmpleado para mantener la apariencia.
+   Si en tu proyecto el archivo se llama diferente, sustituye la ruta. */
+<link rel="stylesheet" href="@Url.Content("~/Estilos/RegistroEmpleado.css")" />
+
+<div class="registro-container">
+    <h2>✏️ Actualizar Empleado</h2>
+
+    @* Mostrar mensaje de éxito si viene en TempData *@
+    @if (TempData["MensajeExito"] != null)
+    {
+        <div class="mensaje-exito">@TempData["MensajeExito"]</div>
+    }
+
+    <form asp-action="ActualizarEmpleado" method="post" id="formActualizarEmpleado">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="IdEmpleado" />
+
+        <div class="campo">
+            <label for="Nombre">Nombre</label>
+            <input asp-for="Nombre" id="Nombre" type="text" required />
+            <span asp-validation-for="Nombre" class="text-validation"></span>
+        </div>
+
+        <div class="campo">
+            <label for="Apellidos">Apellidos</label>
+            <input asp-for="Apellidos" id="Apellidos" type="text" required />
+            <span asp-validation-for="Apellidos" class="text-validation"></span>
+        </div>
+
+        <div class="campo">
+            <label for="FechaNacimiento">Fecha de Nacimiento</label>
+            <input asp-for="FechaNacimiento" id="FechaNacimiento" type="date" />
+            <span asp-validation-for="FechaNacimiento" class="text-validation"></span>
+        </div>
+
+        <div class="campo">
+            <label for="Edad">Edad</label>
+            <input asp-for="Edad" id="Edad" type="number" min="0" />
+            <span asp-validation-for="Edad" class="text-validation"></span>
+        </div>
+
+        <div class="campo">
+            <label for="EstadoCivil">Estado Civil</label>
+            <input asp-for="EstadoCivil" id="EstadoCivil" type="text" />
+            <span asp-validation-for="EstadoCivil" class="text-validation"></span>
+        </div>
+
+        <div class="campo">
+            <label for="Email">Email</label>
+            <input asp-for="Email" id="Email" type="email" />
+            <span asp-validation-for="Email" class="text-validation"></span>
+        </div>
+
+        <div class="campo">
+            <label for="Telefono">Teléfono</label>
+            <input asp-for="Telefono" id="Telefono" type="text" />
+            <span asp-validation-for="Telefono" class="text-validation"></span>
+        </div>
+
+        <div class="campo">
+            <label for="Dni">DNI</label>
+            <input asp-for="Dni" id="Dni" type="text" />
+            <span asp-validation-for="Dni" class="text-validation"></span>
+        </div>
+
+        <div class="acciones">
+            <button type="submit" class="btn-guardar">Guardar cambios</button>
+            <a href="@Url.Action("ConsultarEmpleado", "Home")" class="btn-cancelar">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        // Si quieres validación/UX adicional puedes añadir JS aquí.
+        // Ejemplo: prevenir múltiples clicks en el submit.
+        $(function () {
+            $('#formActualizarEmpleado').on('submit', function () {
+                $('.btn-guardar').prop('disabled', true);
+            });
+        });
+    </script>
+}

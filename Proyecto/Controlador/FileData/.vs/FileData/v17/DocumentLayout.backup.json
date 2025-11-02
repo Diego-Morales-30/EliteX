@@ -1,93 +1,101 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\",
+  "WorkspaceRootPath": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\actualizarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\controllers\\actualizarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\dashconsultar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\dashconsultar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\views\\home\\consultarempleado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\views\\home\\consultarempleado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\home\\consultarempleado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\views\\home\\listarempleado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\home\\listarempleado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\views\\actualizar\\actualizarempleado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\actualizar\\actualizarempleado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\registroempleado.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\registroempleado.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\dashconsultar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\dashconsultar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\views\\empleado\\registrarempleado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\empleado\\registrarempleado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\menuazul.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\menuazul.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\listarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\controllers\\listarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\models\\bddatafilecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\models\\bddatafilecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\models\\bddatafilecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\consultarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\views\\home\\listarempleado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\home\\listarempleado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\registroempleado.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\registroempleado.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\views\\empleado\\registrarempleado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\empleado\\registrarempleado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\menuazul.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\menuazul.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\listarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\controllers\\listarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\consultarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\controllers\\consultarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\configuracioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\controllers\\configuracioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\controllers\\configuracioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\dashlistar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\dashlistar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\dashlistar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\dashlistar.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\dashlistar.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\dashlistar.css||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\cesar an\\desktop\\\u00F1elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|c:\\users\\mirko tasso\\onedrive\\escritorio\\elitex\\proyecto\\controlador\\filedata\\filedata\\wwwroot\\estilos\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{F385B1E0-7D32-45BF-A66B-7085F1E5F3A1}|FileData\\FileData.csproj|solutionrelative:filedata\\wwwroot\\estilos\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
@@ -98,51 +106,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "FileData\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "FileData\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAABcAAABHAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ActualizarEmpleado.cshtml",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Actualizar\\ActualizarEmpleado.cshtml",
+              "RelativeDocumentMoniker": "FileData\\Views\\Actualizar\\ActualizarEmpleado.cshtml",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Actualizar\\ActualizarEmpleado.cshtml",
+              "RelativeToolTip": "FileData\\Views\\Actualizar\\ActualizarEmpleado.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-02T23:25:44.344Z"
+              "WhenOpened": "2025-11-02T22:15:40.648Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ListarController.cs",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ListarController.cs",
-              "RelativeDocumentMoniker": "FileData\\Controllers\\ListarController.cs",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ListarController.cs",
-              "RelativeToolTip": "FileData\\Controllers\\ListarController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ActualizarController.cs",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ActualizarController.cs",
+              "RelativeDocumentMoniker": "FileData\\Controllers\\ActualizarController.cs",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ActualizarController.cs*",
+              "RelativeToolTip": "FileData\\Controllers\\ActualizarController.cs*",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAswGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T04:13:27.279Z"
+              "WhenOpened": "2025-11-02T22:15:22.646Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ConsultarEmpleado.cshtml",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\ConsultarEmpleado.cshtml",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\ConsultarEmpleado.cshtml",
               "RelativeDocumentMoniker": "FileData\\Views\\Home\\ConsultarEmpleado.cshtml",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\ConsultarEmpleado.cshtml",
-              "RelativeToolTip": "FileData\\Views\\Home\\ConsultarEmpleado.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA0AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\ConsultarEmpleado.cshtml*",
+              "RelativeToolTip": "FileData\\Views\\Home\\ConsultarEmpleado.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-01T19:14:37.636Z"
+              "WhenOpened": "2025-11-01T19:14:37.636Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "RegistroEmpleado.css",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\RegistroEmpleado.css",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\RegistroEmpleado.css",
               "RelativeDocumentMoniker": "FileData\\wwwroot\\Estilos\\RegistroEmpleado.css",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\RegistroEmpleado.css",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\RegistroEmpleado.css",
               "RelativeToolTip": "FileData\\wwwroot\\Estilos\\RegistroEmpleado.css",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAGEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -150,11 +161,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ListarEmpleado.cshtml",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\ListarEmpleado.cshtml",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\ListarEmpleado.cshtml",
               "RelativeDocumentMoniker": "FileData\\Views\\Home\\ListarEmpleado.cshtml",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\ListarEmpleado.cshtml",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\ListarEmpleado.cshtml",
               "RelativeToolTip": "FileData\\Views\\Home\\ListarEmpleado.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -162,49 +173,73 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\appsettings.json",
               "RelativeDocumentMoniker": "FileData\\appsettings.json",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\appsettings.json",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\appsettings.json",
               "RelativeToolTip": "FileData\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAC2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-10-02T22:55:01.858Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "FileData\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\AccountController.cs",
               "RelativeToolTip": "FileData\\Controllers\\AccountController.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAcwCQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T22:57:39.068Z",
+              "WhenOpened": "2025-10-02T22:57:39.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DashConsultar.css",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\DashConsultar.css",
+              "RelativeDocumentMoniker": "FileData\\wwwroot\\Estilos\\DashConsultar.css",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\DashConsultar.css",
+              "RelativeToolTip": "FileData\\wwwroot\\Estilos\\DashConsultar.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-01T21:43:41.951Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DashConsultar.css",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\DashConsultar.css",
-              "RelativeDocumentMoniker": "FileData\\wwwroot\\Estilos\\DashConsultar.css",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\DashConsultar.css",
-              "RelativeToolTip": "FileData\\wwwroot\\Estilos\\DashConsultar.css",
-              "ViewState": "AgIAABAAAAAAAAAAAAAswEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-01T21:43:41.951Z"
+              "DocumentIndex": 13,
+              "Title": "ListarController.cs",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ListarController.cs",
+              "RelativeDocumentMoniker": "FileData\\Controllers\\ListarController.cs",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ListarController.cs",
+              "RelativeToolTip": "FileData\\Controllers\\ListarController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T04:13:27.279Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "FileData\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "FileData\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABcAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-02T23:25:44.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "EmpleadoController.cs",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\EmpleadoController.cs",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\EmpleadoController.cs",
               "RelativeDocumentMoniker": "FileData\\Controllers\\EmpleadoController.cs",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\EmpleadoController.cs",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\EmpleadoController.cs",
               "RelativeToolTip": "FileData\\Controllers\\EmpleadoController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -212,23 +247,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 5,
               "Title": "BdDataFileContext.cs",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\BdDataFileContext.cs",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Models\\BdDataFileContext.cs",
               "RelativeDocumentMoniker": "FileData\\Models\\BdDataFileContext.cs",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\BdDataFileContext.cs",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Models\\BdDataFileContext.cs",
               "RelativeToolTip": "FileData\\Models\\BdDataFileContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAACgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T05:37:32.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "RegistrarEmpleado.cshtml",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Empleado\\RegistrarEmpleado.cshtml",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Empleado\\RegistrarEmpleado.cshtml",
               "RelativeDocumentMoniker": "FileData\\Views\\Empleado\\RegistrarEmpleado.cshtml",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Empleado\\RegistrarEmpleado.cshtml",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Empleado\\RegistrarEmpleado.cshtml",
               "RelativeToolTip": "FileData\\Views\\Empleado\\RegistrarEmpleado.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -236,11 +271,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Empleado.cs",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Empleado.cs",
               "RelativeDocumentMoniker": "FileData\\Models\\Empleado.cs",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Empleado.cs",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Empleado.cs",
               "RelativeToolTip": "FileData\\Models\\Empleado.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -248,11 +283,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Account\\Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "FileData\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Account\\Login.cshtml",
               "RelativeToolTip": "FileData\\Views\\Account\\Login.cshtml",
               "ViewState": "AgIAALYAAAAAAAAAAAAwwDEAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -260,11 +295,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "MenuAzul.css",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\MenuAzul.css",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\MenuAzul.css",
               "RelativeDocumentMoniker": "FileData\\wwwroot\\Estilos\\MenuAzul.css",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\MenuAzul.css",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\MenuAzul.css",
               "RelativeToolTip": "FileData\\wwwroot\\Estilos\\MenuAzul.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -272,11 +307,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "FileData\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Models\\ErrorViewModel.cs",
               "RelativeToolTip": "FileData\\Models\\ErrorViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -284,11 +319,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "FileData\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\HomeController.cs",
               "RelativeToolTip": "FileData\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -296,11 +331,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "DashListar.css",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\DashListar.css",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\DashListar.css",
               "RelativeDocumentMoniker": "FileData\\wwwroot\\Estilos\\DashListar.css",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\DashListar.css",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\DashListar.css",
               "RelativeToolTip": "FileData\\wwwroot\\Estilos\\DashListar.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -308,11 +343,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "DashListar.css",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\DashListar.css",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\DashListar.css",
               "RelativeDocumentMoniker": "FileData\\wwwroot\\Estilos\\DashListar.css",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\DashListar.css",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\DashListar.css",
               "RelativeToolTip": "FileData\\wwwroot\\Estilos\\DashListar.css",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAFYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -320,11 +355,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "ConsultarController.cs",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ConsultarController.cs",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ConsultarController.cs",
               "RelativeDocumentMoniker": "FileData\\Controllers\\ConsultarController.cs",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ConsultarController.cs",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ConsultarController.cs",
               "RelativeToolTip": "FileData\\Controllers\\ConsultarController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -332,11 +367,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "ConfiguracionController.cs",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ConfiguracionController.cs",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ConfiguracionController.cs",
               "RelativeDocumentMoniker": "FileData\\Controllers\\ConfiguracionController.cs",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ConfiguracionController.cs",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Controllers\\ConfiguracionController.cs",
               "RelativeToolTip": "FileData\\Controllers\\ConfiguracionController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -344,11 +379,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "FileData\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\Models\\Usuario.cs",
               "RelativeToolTip": "FileData\\Models\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -356,11 +391,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Estilos.css",
-              "DocumentMoniker": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\Estilos.css",
+              "DocumentMoniker": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\Estilos.css",
               "RelativeDocumentMoniker": "FileData\\wwwroot\\Estilos\\Estilos.css",
-              "ToolTip": "C:\\Users\\Cesar AN\\Desktop\\\u00D1eliTEX\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\Estilos.css",
+              "ToolTip": "C:\\Users\\MIRKO TASSO\\OneDrive\\Escritorio\\Elitex\\Proyecto\\Controlador\\FileData\\FileData\\wwwroot\\Estilos\\Estilos.css",
               "RelativeToolTip": "FileData\\wwwroot\\Estilos\\Estilos.css",
               "ViewState": "AgIAAJIAAAAAAAAAAAAAwAYBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",

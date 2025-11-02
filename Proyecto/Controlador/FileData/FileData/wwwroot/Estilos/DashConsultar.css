@@ -1,5 +1,4 @@
-﻿
-.tabla-consultar-container {
+﻿.tabla-consultar-container {
     padding: 25px;
     background-color: #0b0f1a;
     border-radius: 20px;
@@ -64,5 +63,61 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* ---------------------------
+   ESTILOS ADICIONADOS PARA "Actualizar"
+   --------------------------- */
+
+/* Botón actualizar - visibilidad y alineado */
+.btn-actualizar {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(0,123,255,0.06), rgba(0,123,255,0.02));
+    color: #cfe3ff;
+    border: 1px solid rgba(255,255,255,0.08);
+    cursor: pointer;
+    font-weight: 700;
+    margin-left: 12px;
+    white-space: nowrap;
+    transition: background 0.18s ease, transform 0.12s ease;
+    align-self: center;
+}
+
+    .btn-actualizar:hover {
+        background: linear-gradient(90deg, rgba(0,123,255,0.14), rgba(0,123,255,0.04));
+        transform: translateY(-2px);
+    }
+
+/* Contenedor flexible que envuelve el título y el botón para alinearlos */
+.h3-with-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+    .h3-with-btn h3 {
+        margin: 0;
+        font-weight: 800;
+        color: #d4af37;
+    }
+
+/* Si el bloque del empleado tiene padding/box, ajustamos el botón para verse bien */
+.resultado-empleado > div {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/* Si el botón termina quedando muy pegado, se le da separación */
+.resultado-empleado .btn-actualizar {
+    margin-top: 6px;
+}
+
+/* Asegura contraste si el tema oscuro aplica filtros globales */
+@media (prefers-color-scheme: dark) {
+    .btn-actualizar {
+        border-color: rgba(255,255,255,0.06);
     }
 }
