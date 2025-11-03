@@ -17,11 +17,13 @@ public partial class BdDataFileContext : DbContext
 
     public virtual DbSet<Empleado> Empleados { get; set; }
 
+    public virtual DbSet<Horario> Horarios { get; set; }
+
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Persist Security Info=False;Integrated Security=true;  Initial Catalog= BD_Data_File; Server=DESKTOP-RCBK92V\\SQLEXPRESS;Encrypt=True; TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Persist Security Info=False;Integrated Security=true;Initial Catalog=BD_Data_File;Server=-DIEGO-;Encrypt=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -55,11 +57,35 @@ public partial class BdDataFileContext : DbContext
                 .IsUnicode(false);
         });
 
+        modelBuilder.Entity<Horario>(entity =>
+        {
+            entity.HasKey(e => e.IdHorario).HasName("PK__Horarios__1539229B58052227");
+
+            entity.HasIndex(e => new { e.IdEmpleado, e.FechaInicio }, "UQ_Horario_Unico").IsUnique();
+
+            entity.Property(e => e.FechaRegistro)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Observaciones)
+                .HasMaxLength(200)
+                .IsUnicode(false);
+
+            entity.HasOne(d => d.IdEmpleadoNavigation).WithMany(p => p.Horarios)
+                .HasForeignKey(d => d.IdEmpleado)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Horarios_Empleado");
+
+            entity.HasOne(d => d.UsuarioRegistroNavigation).WithMany(p => p.Horarios)
+                .HasForeignKey(d => d.UsuarioRegistro)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Horarios_Usuario");
+        });
+
         modelBuilder.Entity<Usuario>(entity =>
         {
             entity.HasKey(e => e.IdUsuario).HasName("PK__Usuario__5B65BF97540CA4B5");
 
-            entity.ToTable("Usuario", tb => tb.HasTrigger("TRG_AutoUsuario"));
+            entity.ToTable("Usuario");
 
             entity.HasIndex(e => e.IdEmpleado, "UQ__Usuario__CE6D8B9FDAB0FFEA").IsUnique();
 

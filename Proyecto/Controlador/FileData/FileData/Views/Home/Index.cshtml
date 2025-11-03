@@ -22,26 +22,29 @@
             <a href="#" class="menu-item" id="btn-listar">Listar Empleados</a>
             <a href="#" class="menu-item" id="btn-consultar">Consultar Empleado</a>
             <a href="#" class="menu-item" id="btn-configurar">Registrar Empleado</a>
+            <a href="#" class="menu-item" id="btn-registrar">Registrar Horario</a>
             <a href="#" class="menu-item">Salir</a>
         </nav>
     </aside>
 
-    <main class="menu-dashboard" id="dashboard-content">
-        <h1>Dashboard</h1>
-        <p>Bienvenido al panel principal de EliteX.</p>
+    <main class="menu-dashboard">
+        <div id="dashboard-content" class="dashboard-scroll">
+            <h1>Dashboard</h1>
+            <p>Bienvenido al panel principal de EliteX.</p>
+        </div>
     </main>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
     $(document).ready(function () {
 
-    // Botón: Listar Empleados
+        // Botón: Listar Empleados
         $("#btn-listar").click(function (e) {
             e.preventDefault();
-
             $.ajax({
-                url: '/Listar/ListarEmpleado', // Acción del controlador
+                url: '/Listar/ListarEmpleado',
                 type: 'GET',
                 success: function (result) {
                     $("#dashboard-content").html(result);
@@ -52,8 +55,8 @@
             });
         });
 
-    // Botón: Consultar Empleado
-                $("#btn-consultar").click(function (e) {
+        // Botón: Consultar Empleado
+        $("#btn-consultar").click(function (e) {
             e.preventDefault();
             $.ajax({
                 url: '/Consultar/ConsultarEmpleado',
@@ -67,23 +70,37 @@
             });
         });
 
-    // Botón: Configuración -> Registrar Empleado
+        // Botón: Registrar Empleado
         $("#btn-configurar").click(function (e) {
-        e.preventDefault();
-
-        $.ajax({
-            url: '/Empleado/RegistrarEmpleado', // usa este path exacto
-            type: 'GET',
-            success: function (result) {
-                $("#dashboard-content").html(result);
-            },
-            error: function () {
-                $("#dashboard-content").html("<p style='color:red;'>Error al cargar la vista de configuración.</p>");
-            }
+            e.preventDefault();
+            $.ajax({
+                url: '/Empleado/RegistrarEmpleado',
+                type: 'GET',
+                success: function (result) {
+                    $("#dashboard-content").html(result);
+                },
+                error: function () {
+                    $("#dashboard-content").html("<p style='color:red;'>Error al cargar la vista de configuración.</p>");
+                }
+            });
         });
-    });
 
-        // Botón: Inicio (restaurar contenido original del dashboard)
+        // Botón: Registrar Horario
+        $("#btn-registrar").click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '/Horarios/RegistrarHorario',
+                type: 'GET',
+                success: function (result) {
+                    $("#dashboard-content").html(result);
+                },
+                error: function () {
+                    $("#dashboard-content").html("<p style='color:red;'>Error al cargar el registro de horario.</p>");
+                }
+            });
+        });
+
+        // Botón: Inicio
         $("#btn-inicio").click(function (e) {
             e.preventDefault();
             $("#dashboard-content").html(`
@@ -93,5 +110,3 @@
         });
     });
 </script>
-
-

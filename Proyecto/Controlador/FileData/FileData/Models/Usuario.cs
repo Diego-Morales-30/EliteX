@@ -15,5 +15,7 @@ public partial class Usuario
 
     public int? IdEmpleado { get; set; }
 
+    public virtual ICollection<Horario> Horarios { get; set; } = new List<Horario>();
+
     public virtual Empleado? IdEmpleadoNavigation { get; set; }
 }

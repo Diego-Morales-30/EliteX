@@ -1,0 +1,94 @@
+﻿@model FileData.Models.Horario
+
+@{
+    ViewData["Title"] = "Registrar Horario";
+    Layout = null;
+}
+
+<!-- Vincula tu CSS -->
+<link rel="stylesheet" href="~/Estilos/estilos-horario.css" />
+
+<div class="registro-container">
+    <h2>Registrar Horario</h2>
+
+    <form id="formRegistrarHorario">
+        <div>
+            <label for="IdEmpleado">Empleado:</label>
+            <select id="IdEmpleado" name="IdEmpleado" required>
+                <option value="">-- Seleccione --</option>
+                @foreach (var emp in ViewBag.Empleados)
+                {
+                    <option value="@emp.IdEmpleado">@emp.Nombre @emp.Apellidos</option>
+                }
+            </select>
+        </div>
+
+        <div>
+            <label for="FechaInicio">Fecha de Inicio:</label>
+            <input type="date" id="FechaInicio" name="FechaInicio" required />
+        </div>
+
+        <div>
+            <label for="HoraEntrada">Hora de Entrada:</label>
+            <input type="time" id="HoraEntrada" name="HoraEntrada" required />
+        </div>
+
+        <div>
+            <label for="HoraSalida">Hora de Salida:</label>
+            <input type="time" id="HoraSalida" name="HoraSalida" />
+        </div>
+
+        <div>
+            <label for="Observaciones">Observaciones:</label>
+            <input type="text" id="Observaciones" name="Observaciones" placeholder="Opcional..." />
+        </div>
+
+        <button type="submit">Guardar Horario</button>
+    </form>
+</div>
+
+<!-- 🌟 MODAL PERSONALIZADO -->
+<div id="modalMensaje" class="modal-rustico">
+    <div class="modal-content">
+        <div class="modal-icono" id="modalIcono">✅</div>
+        <h3 id="modalTitulo"></h3>
+        <p id="modalTexto"></p>
+        <button id="btnCerrarModal">Aceptar</button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $("#formRegistrarHorario").submit(function (e) {
+        e.preventDefault();
+
+        $.ajax({
+            url: '/Horarios/RegistrarHorario',
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function () {
+                mostrarModal("Horario Guardado", "El horario se ha registrado exitosamente ✅", true);
+                $("#formRegistrarHorario")[0].reset();
+            },
+            error: function () {
+                mostrarModal("Error", "No se pudo registrar el horario ❌", false);
+            }
+        });
+    });
+
+    function mostrarModal(titulo, mensaje, exito) {
+        $("#modalTitulo").text(titulo);
+        $("#modalTexto").text(mensaje);
+        if (exito) {
+            $("#modalIcono").text("✅").css("color", "#00ff99");
+        } else {
+            $("#modalIcono").text("❌").css("color", "#ff4d4d");
+        }
+        $("#modalMensaje").fadeIn(300);
+    }
+
+    $("#btnCerrarModal").click(function () {
+        $("#modalMensaje").fadeOut(300);
+    });
+</script>

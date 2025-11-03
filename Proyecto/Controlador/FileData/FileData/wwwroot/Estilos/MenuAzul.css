@@ -1,188 +1,115 @@
-﻿body {
+﻿/* ==== BLOQUEA SCROLL GLOBAL ==== */
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    overflow: hidden; /* 🚫 Sin scroll global */
+    font-family: 'Segoe UI', sans-serif;
     background-color: #0b0c10;
     color: #e0e0e0;
-    font-family: 'Segoe UI', sans-serif;
 }
 
+/* ==== ESTRUCTURA GENERAL ==== */
 .menu-container {
     display: grid;
-    grid-template-rows: 80px 1fr;
+    grid-template-rows: 70px 1fr;
     grid-template-columns: 250px 1fr;
     grid-template-areas:
         "header header"
         "sidebar dashboard";
     height: 100vh;
+    overflow: hidden; /* 🔒 Mantiene todo fijo */
 }
 
-/* HEADER */
+/* ==== HEADER ==== */
 .menu-header {
     grid-area: header;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: #1f2833;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 30px;
-    box-shadow: 0 0 25px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 102, 255, 0.3);
 }
 
 .menu-logo {
-    font-size: 26px;
-    font-weight: bold;
     color: #007bff;
-    letter-spacing: 1.5px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.user-info-header {
-    text-align: right;
-    font-size: 15px;
-    line-height: 1.4;
-}
-
-    .user-info-header strong {
-        color: #007bff;
-    }
-
-/* SIDEBAR - MENÚ VERTICAL */
+/* ==== SIDEBAR ==== */
 .menu-sidebar {
     grid-area: sidebar;
     background-color: #14181f;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch;
-    padding-top: 30px;
+    padding: 20px 0;
     box-shadow: inset -2px 0 10px rgba(0, 102, 255, 0.15);
 }
 
-.menu-nav-vertical {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 0 20px;
-}
-
 .menu-item {
-    color: #e0e0e0;
     text-decoration: none;
+    color: #e0e0e0;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin: 5px 15px;
     font-weight: 500;
-    padding: 12px 15px;
-    border-radius: 10px;
-    text-align: left;
-    transition: 0.3s ease;
-    background-color: transparent;
 }
 
     .menu-item:hover {
         background-color: #007bff;
         color: #fff;
-        box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
     }
 
-/* DASHBOARD */
+/* ==== DASHBOARD (contenedor fijo) ==== */
 .menu-dashboard {
     grid-area: dashboard;
     background-color: #0f1117;
-    border-radius: 20px;
-    margin: 25px;
-    padding: 40px;
+    border-radius: 16px;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* ❌ evita expandirse */
     box-shadow: 0 0 30px rgba(0, 102, 255, 0.3);
 }
 
-    .menu-dashboard h1 {
-        color: #007bff;
-        margin-bottom: 15px;
-    }
-
-    .menu-dashboard p {
-        color: #cfcfcf;
-    }
-
-/* EFECTO DE ENTRADA */
-.menu-container {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.8s ease forwards;
+/* ==== CONTENIDO CON SCROLL INTERNO ==== */
+.dashboard-scroll,
+#dashboard-content {
+    flex: 1;
+    overflow-y: auto; /* ✅ solo aquí hay scroll */
+    overflow-x: hidden;
+    padding: 30px;
+    border-radius: 16px;
+    height: 100%;
+    box-sizing: border-box;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ====== ESTILOS LISTADO EMPLEADOS ====== */
-
-.tabla-container {
-    padding: 25px;
-    background-color: #0b0f1a;
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgba(0, 102, 255, 0.3);
-    animation: fadeIn 0.6s ease-in-out;
-}
-
-.titulo-lista {
-    color: #007bff;
-    font-weight: 700;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    border-left: 6px solid #007bff;
-    padding-left: 10px;
-}
-
-.tabla-empleados {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.95rem;
-    color: #dce3f0;
-    background-color: #0f1624;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-    .tabla-empleados thead {
-        background: linear-gradient(90deg, #003b99, #0056d6);
+    /* ==== SCROLLBAR PERSONALIZADO ==== */
+    .dashboard-scroll::-webkit-scrollbar,
+    #dashboard-content::-webkit-scrollbar {
+        width: 8px;
     }
 
-    .tabla-empleados th {
-        padding: 12px 10px;
-        text-align: left;
-        font-weight: 600;
-        color: #ffffff;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
+    .dashboard-scroll::-webkit-scrollbar-thumb,
+    #dashboard-content::-webkit-scrollbar-thumb {
+        background-color: #007bff;
+        border-radius: 8px;
     }
 
-    .tabla-empleados tbody tr {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-        transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-        .tabla-empleados tbody tr:hover {
-            background-color: rgba(0, 123, 255, 0.12);
-            transform: scale(1.01);
+        .dashboard-scroll::-webkit-scrollbar-thumb:hover,
+        #dashboard-content::-webkit-scrollbar-thumb:hover {
+            background-color: #339cff;
         }
 
-    .tabla-empleados td {
-        padding: 10px 12px;
-        color: #bfc9da;
+    /* ==== TEXTO ==== */
+    .dashboard-scroll h1,
+    #dashboard-content h1 {
+        color: #007bff;
     }
-
-    .tabla-empleados tbody tr td:first-child {
-        color: #4da3ff;
-        font-weight: 600;
-    }
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
