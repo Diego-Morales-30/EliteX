@@ -74,8 +74,7 @@
               "RelativeToolTip": "FileData\\Views\\Account\\Login.cshtml",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-07T02:59:19.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-07T02:59:19.922Z"
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "FileData\\Models\\Horario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T02:58:39.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-07T02:58:39.214Z"
             },
             {
               "$type": "Document",
@@ -100,8 +98,7 @@
               "RelativeToolTip": "FileData\\Views\\Actualizar\\ActualizarEmpleado.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-07T02:55:12.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-07T02:55:12.035Z"
             },
             {
               "$type": "Document",
@@ -113,8 +110,7 @@
               "RelativeToolTip": "FileData\\wwwroot\\Estilos\\DashActualizar.css",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-07T02:55:00.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-07T02:55:00.925Z"
             },
             {
               "$type": "Document",
@@ -126,8 +122,7 @@
               "RelativeToolTip": "FileData\\wwwroot\\Estilos\\MenuAzul.css",
               "ViewState": "AgIAAFUAAAAAAAAAAAAAAGgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-03T03:50:33.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T03:50:33.624Z"
             },
             {
               "$type": "Document",
@@ -139,8 +134,7 @@
               "RelativeToolTip": "FileData\\wwwroot\\Estilos\\MenuLateral.css",
               "ViewState": "AgIAAJIAAAAAAAAAAAAAAI8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-07T02:28:10.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-07T02:28:10.92Z"
             },
             {
               "$type": "Document",
@@ -150,7 +144,7 @@
               "RelativeDocumentMoniker": "FileData\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\diego\\OneDrive\\Escritorio\\Proyecto_EliteX\\Proyecto\\Controlador\\FileData\\FileData\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "FileData\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAB8AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAqwCoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-03T03:47:06.281Z",
               "EditorCaption": ""
@@ -165,8 +159,7 @@
               "RelativeToolTip": "FileData\\wwwroot\\Estilos\\DashConsultar.css",
               "ViewState": "AgIAACUAAAAAAAAAAAAAAC4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-07T02:59:30.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-07T02:59:30.701Z"
             },
             {
               "$type": "Document",
@@ -178,8 +171,7 @@
               "RelativeToolTip": "FileData\\Controllers\\ActualizarController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T03:03:58.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-07T03:03:58.176Z"
             },
             {
               "$type": "Document",
@@ -191,8 +183,7 @@
               "RelativeToolTip": "FileData\\wwwroot\\Estilos\\RegistroEmpleado.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-07T02:57:42.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-07T02:57:42.708Z"
             },
             {
               "$type": "Document",
@@ -204,8 +195,7 @@
               "RelativeToolTip": "FileData\\Views\\Empleado\\RegistrarEmpleado.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-07T02:58:23.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-07T02:58:23.335Z"
             },
             {
               "$type": "Document",
@@ -217,8 +207,7 @@
               "RelativeToolTip": "FileData\\Views\\Horarios\\RegistrarHorario.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-03T03:56:53.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T03:56:53.331Z"
             },
             {
               "$type": "Document",
@@ -230,8 +219,7 @@
               "RelativeToolTip": "FileData\\wwwroot\\Estilos\\estilos-horario.css",
               "ViewState": "AgIAADwAAAAAAAAAAAAAAEsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-03T04:02:30.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T04:02:30.936Z"
             }
           ]
         }

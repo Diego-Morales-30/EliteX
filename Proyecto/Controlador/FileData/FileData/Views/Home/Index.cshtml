@@ -35,8 +35,22 @@
             <!-- Submenú Empleados -->
             <div class="menu-submenu" id="submenu-empleados">
                 <a href="#" class="submenu-item" id="btn-listar-empleados">Listar Empleados</a>
-                <a href="#" class="submenu-item" id="btn-crear-empleado">Crear Empleado</a>
+                <a href="#" class="submenu-item" id="btn-crear-empleado">Registrar Empleado</a>
                 <a href="#" class="submenu-item" id="btn-consultar-empleado">Consultar Empleado</a>
+            </div>
+
+            <!-- Menú Usuarios -->
+            <div class="menu-row">
+                <a href="#" class="menu-item menu-item-full has-submenu" id="btn-usuarios">
+                    Usuarios
+                </a>
+            </div>
+
+            <!-- Submenú Usuarios -->
+            <div class="menu-submenu" id="submenu-usuarios">
+                <a href="#" class="submenu-item" id="btn-listar-usuario">Listar Usuarios</a>
+                <a href="#" class="submenu-item" id="btn-crear-usuario">Crear Usuario</a>
+                <a href="#" class="submenu-item" id="btn-consultar-usuario">Consultar Usuario</a>
             </div>
 
             <!-- Fila 3 -->
@@ -67,6 +81,13 @@
         $("#btn-empleados").click(function (e) {
             e.preventDefault();
             $("#submenu-empleados").slideToggle(200).toggleClass("active");
+            $(this).toggleClass("active");
+        });
+
+        // Toggle submenú Usuarios con animación
+        $("#btn-usuarios").click(function (e) {
+            e.preventDefault();
+            $("#submenu-usuarios").slideToggle(200).toggleClass("active");
             $(this).toggleClass("active");
         });
 
