@@ -3,6 +3,7 @@
 }
 
 <link rel="stylesheet" href="~/Estilos/MenuAzul.css" />
+<link rel="stylesheet" href="~/Estilos/MenuLateral.css" />
 
 <div class="menu-container">
     <header class="menu-header">
@@ -18,12 +19,36 @@
 
     <aside class="menu-sidebar">
         <nav class="menu-nav-vertical">
-            <a href="#" class="menu-item" id="btn-inicio">Inicio</a>
-            <a href="#" class="menu-item" id="btn-listar">Listar Empleados</a>
-            <a href="#" class="menu-item" id="btn-consultar">Consultar Empleado</a>
-            <a href="#" class="menu-item" id="btn-configurar">Registrar Empleado</a>
-            <a href="#" class="menu-item" id="btn-registrar">Registrar Horario</a>
-            <a href="#" class="menu-item">Salir</a>
+            <!-- Fila 1 -->
+            <div class="menu-row">
+                <a href="#" class="menu-item" id="btn-inicio">Inicio</a>
+                <a href="#" class="menu-item" id="btn-horarios">Horarios</a>
+            </div>
+
+            <!-- Fila 2 - Botón Empleados -->
+            <div class="menu-row">
+                <a href="#" class="menu-item menu-item-full has-submenu" id="btn-empleados">
+                    Empleados
+                </a>
+            </div>
+
+            <!-- Submenú Empleados -->
+            <div class="menu-submenu" id="submenu-empleados">
+                <a href="#" class="submenu-item" id="btn-listar-empleados">Listar Empleados</a>
+                <a href="#" class="submenu-item" id="btn-crear-empleado">Crear Empleado</a>
+                <a href="#" class="submenu-item" id="btn-consultar-empleado">Consultar Empleado</a>
+            </div>
+
+            <!-- Fila 3 -->
+            <div class="menu-row">
+                <a href="#" class="menu-item" id="btn-reportes">Reportes</a>
+                <a href="#" class="menu-item" id="btn-configuracion">Configuración</a>
+            </div>
+
+            <!-- Fila 4 -->
+            <div class="menu-row">
+                <a href="#" class="menu-item menu-item-full" id="btn-salir">Salir</a>
+            </div>
         </nav>
     </aside>
 
@@ -36,12 +61,26 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 <script>
     $(document).ready(function () {
+        // Toggle submenú Empleados con animación
+        $("#btn-empleados").click(function (e) {
+            e.preventDefault();
+            $("#submenu-empleados").slideToggle(200).toggleClass("active");
+            $(this).toggleClass("active");
+        });
 
-        // Botón: Listar Empleados
-        $("#btn-listar").click(function (e) {
+        // Botón Inicio
+        $("#btn-inicio").click(function (e) {
+            e.preventDefault();
+            $("#dashboard-content").html(`
+                <h1>Dashboard</h1>
+                <p>Bienvenido al panel principal de EliteX.</p>
+            `);
+        });
+
+        // Botón Listar Empleados - AJAX
+        $("#btn-listar-empleados").click(function (e) {
             e.preventDefault();
             $.ajax({
                 url: '/Listar/ListarEmpleado',
@@ -55,8 +94,38 @@
             });
         });
 
-        // Botón: Consultar Empleado
-        $("#btn-consultar").click(function (e) {
+        // Botón Crear Empleado - AJAX
+        $("#btn-crear-empleado").click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '/Empleado/RegistrarEmpleado',
+                type: 'GET',
+                success: function (result) {
+                    $("#dashboard-content").html(result);
+                },
+                error: function () {
+                    $("#dashboard-content").html("<p style='color:red;'>Error al cargar el formulario de creación.</p>");
+                }
+            });
+        });
+
+        // Botón Actualizar Empleado - AJAX
+        $("#btn-actualizar-empleado").click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '/Empleado/ActualizarEmpleado',
+                type: 'GET',
+                success: function (result) {
+                    $("#dashboard-content").html(result);
+                },
+                error: function () {
+                    $("#dashboard-content").html("<p style='color:red;'>Error al cargar la actualización de empleados.</p>");
+                }
+            });
+        });
+
+        // Botón Consultar Empleado - AJAX
+        $("#btn-consultar-empleado").click(function (e) {
             e.preventDefault();
             $.ajax({
                 url: '/Consultar/ConsultarEmpleado',
@@ -70,23 +139,8 @@
             });
         });
 
-        // Botón: Registrar Empleado
-        $("#btn-configurar").click(function (e) {
-            e.preventDefault();
-            $.ajax({
-                url: '/Empleado/RegistrarEmpleado',
-                type: 'GET',
-                success: function (result) {
-                    $("#dashboard-content").html(result);
-                },
-                error: function () {
-                    $("#dashboard-content").html("<p style='color:red;'>Error al cargar la vista de configuración.</p>");
-                }
-            });
-        });
-
-        // Botón: Registrar Horario
-        $("#btn-registrar").click(function (e) {
+        // Botón Horarios - AJAX
+        $("#btn-horarios").click(function (e) {
             e.preventDefault();
             $.ajax({
                 url: '/Horarios/RegistrarHorario',
@@ -95,18 +149,21 @@
                     $("#dashboard-content").html(result);
                 },
                 error: function () {
-                    $("#dashboard-content").html("<p style='color:red;'>Error al cargar el registro de horario.</p>");
+                    $("#dashboard-content").html("<p style='color:red;'>Error al cargar los horarios.</p>");
                 }
             });
         });
 
-        // Botón: Inicio
-        $("#btn-inicio").click(function (e) {
+        // Botón Reportes (aquí deberías agregar funcionalidad AJAX para cargar reportes cuando tengas la ruta)
+
+        // Botón Configuración (idem para configuración)
+
+        // Botón Salir
+        $("#btn-salir").click(function (e) {
             e.preventDefault();
-            $("#dashboard-content").html(`
-                <h1>Dashboard</h1>
-                <p>Bienvenido al panel principal de EliteX.</p>
-            `);
+            if (confirm("¿Está seguro que desea salir?")) {
+                window.location.href = '/Home/Logout';
+            }
         });
     });
 </script>

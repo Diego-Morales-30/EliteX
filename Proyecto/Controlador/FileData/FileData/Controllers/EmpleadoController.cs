@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using FileData.Models;
-using System.Linq;
+﻿using FileData.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FileData.Controllers
 {

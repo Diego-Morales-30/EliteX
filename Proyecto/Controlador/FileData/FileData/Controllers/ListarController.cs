@@ -1,11 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using FileData.Models;
-using System.Linq;
+﻿using FileData.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FileData.Controllers
 {
-        public class ListarController : Controller
-        {
+    public class ListarController : Controller
+    {
         private readonly BdDataFileContext _context;
 
         public ListarController(BdDataFileContext context)

@@ -1,7 +1,5 @@
 using FileData.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
 
 namespace FileData.Controllers
 {
