@@ -1,0 +1,86 @@
+﻿/* Reloj fijo superior - centrado, sin movimiento, halo reducido */
+#reloj-fixed {
+    position: fixed;
+    top: 8px; /* SUBIDO: valor más pequeño para estar más alto */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background: linear-gradient(180deg, rgba(12,18,30,0.98), rgba(8,12,22,0.96));
+    border: 1px solid rgba(0,123,255,0.12);
+    /* HALO REDUCIDO: menos blur y menos difusión */
+    box-shadow: 0 6px 14px rgba(0,102,255,0.07), inset 0 -2px 6px rgba(0,0,0,0.18);
+    color: #e6f4ff;
+    padding: 8px 16px; /* un poco menos de padding para ajustar al nuevo alto */
+    border-radius: 12px;
+    min-width: 160px;
+    max-width: calc(100% - 40px);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    backdrop-filter: blur(4px);
+    pointer-events: auto;
+    transition: none; /* sin animaciones al hover */
+}
+
+#reloj-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+/* Hora principal (hh:mm) */
+#reloj-time, #reloj-hm {
+    font-size: 1.45rem; /* tamaño legible, ligeramente menor a 1.5 para que no sobresalga */
+    font-weight: 700;
+    color: #dff6ff;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Badge de segundos: menos brillo y sombra reducida */
+#reloj-seg {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 7px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 8px;
+    background: rgba(0,123,255,0.10);
+    color: #e9fbff;
+    vertical-align: middle;
+    box-shadow: 0 2px 6px rgba(0,123,255,0.06); /* sutil */
+}
+
+/* Fecha / día */
+#reloj-date {
+    font-size: 0.76rem;
+    color: #bcd9f0;
+}
+
+/* Mantener centrado y sin movimiento al pasar mouse */
+#reloj-fixed:hover {
+    transform: translateX(-50%);
+    transition: none;
+}
+
+/* Responsive: reducir ligeramente en pantallas pequeñas */
+@media (max-width: 420px) {
+    #reloj-fixed {
+        top: 6px;
+        padding: 6px 10px;
+    }
+
+    #reloj-hm {
+        font-size: 1.1rem;
+    }
+
+    #reloj-seg {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+        margin-left: 6px;
+    }
+
+    #reloj-date {
+        font-size: 0.68rem;
+    }
+}

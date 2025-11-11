@@ -4,7 +4,17 @@
 
 <link rel="stylesheet" href="~/Estilos/MenuAzul.css" />
 <link rel="stylesheet" href="~/Estilos/MenuLateral.css" />
+<link rel="stylesheet" href="~/Estilos/Reloj.css" />
 
+<div id="reloj-fixed" role="timer" aria-live="polite" aria-atomic="true">
+    <div id="reloj-inner">
+        <div id="reloj-time">
+            <span id="reloj-hm">00:00</span>
+            <span id="reloj-seg">00</span>
+        </div>
+        <div id="reloj-date">—</div>
+    </div>
+</div>
 <div class="menu-container">
     <header class="menu-header">
         <div class="menu-logo">ELITEX</div>
@@ -188,3 +198,35 @@
         });
     });
 </script>
+<script>
+    (function () {
+        const hmEl = document.getElementById('reloj-hm');
+        const segEl = document.getElementById('reloj-seg');
+        const dateEl = document.getElementById('reloj-date');
+
+        function pad(n) { return n < 10 ? '0' + n : n; }
+
+        function actualizarReloj() {
+            const now = new Date();
+            const hh = pad(now.getHours());
+            const mm = pad(now.getMinutes());
+            const ss = pad(now.getSeconds());
+
+            // Día y mes cortos
+            const dias = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+            const meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+            const fecha = `${dias[now.getDay()]} ${pad(now.getDate())} ${meses[now.getMonth()]} ${now.getFullYear()}`;
+
+            // Actualizar DOM (no tocamos transform ni estilo)
+            if (hmEl) hmEl.textContent = `${hh}:${mm}`;
+            if (segEl) segEl.textContent = ss;
+            if (dateEl) dateEl.textContent = fecha;
+        }
+
+        // Primera llamada y luego cada segundo
+        actualizarReloj();
+        setInterval(actualizarReloj, 1000);
+    })();
+</script>
+
+
