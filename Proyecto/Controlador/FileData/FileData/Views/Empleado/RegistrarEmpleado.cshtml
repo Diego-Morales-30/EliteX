@@ -2,78 +2,137 @@
 
 @{
     ViewData["Title"] = "Registrar Empleado";
+    Layout = null;
 }
 
-<!-- Vincula el nuevo diseño -->
-<link rel="stylesheet" href="@Url.Content("~/Estilos/RegistroEmpleado.css")" />
+<link rel="stylesheet" href="~/Estilos/RegistroEmpleado.css" />
 
 <div class="registro-container">
     <h2>Registrar Empleado</h2>
 
-    <form id="formRegistrarEmpleado">
+    <form id="formRegistrarEmpleado" novalidate>
         <div>
-            <label>Nombre:</label>
-            <input name="Nombre" type="text" required />
+            <label for="Nombre">Nombre:</label>
+            <input asp-for="Nombre" id="Nombre" name="Nombre" type="text" placeholder="Ingrese el nombre" />
+            <span class="text-danger" data-valmsg-for="Nombre"></span>
         </div>
 
         <div>
-            <label>Apellidos:</label>
-            <input name="Apellidos" type="text" required />
+            <label for="Apellidos">Apellidos:</label>
+            <input asp-for="Apellidos" id="Apellidos" name="Apellidos" type="text" placeholder="Ingrese los apellidos" />
+            <span class="text-danger" data-valmsg-for="Apellidos"></span>
         </div>
 
         <div>
-            <label>Fecha de nacimiento:</label>
-            <input name="FechaNacimiento" type="date" required />
+            <label for="FechaNacimiento">Fecha de Nacimiento:</label>
+            <input asp-for="FechaNacimiento" id="FechaNacimiento" name="FechaNacimiento" type="date" />
+            <span class="text-danger" data-valmsg-for="FechaNacimiento"></span>
         </div>
 
         <div>
-            <label>Edad:</label>
-            <input name="Edad" type="number" min="18" max="99" required />
+            <label for="Edad">Edad:</label>
+            <input asp-for="Edad" id="Edad" name="Edad" type="number" readonly placeholder="Se calculará automáticamente" />
+            <span class="text-danger" data-valmsg-for="Edad"></span>
         </div>
 
         <div>
-            <label>Estado civil:</label>
-            <input name="EstadoCivil" type="text" required />
+            <label for="EstadoCivil">Estado Civil:</label>
+            <select asp-for="EstadoCivil" id="EstadoCivil" name="EstadoCivil" class="combo-elegante">
+                <option value="">-- Seleccione --</option>
+                <option value="Soltero">Soltero</option>
+                <option value="Casado">Casado</option>
+                <option value="Divorciado">Divorciado</option>
+                <option value="Viudo">Viudo</option>
+            </select>
+            <span class="text-danger" data-valmsg-for="EstadoCivil"></span>
         </div>
 
         <div>
-            <label>Email:</label>
-            <input name="Email" type="email" required />
+            <label for="Email">Correo Electrónico:</label>
+            <input asp-for="Email" id="Email" name="Email" type="email" placeholder="ejemplo@correo.com" />
+            <span class="text-danger" data-valmsg-for="Email"></span>
         </div>
 
         <div>
-            <label>Teléfono:</label>
-            <input name="Telefono" type="text" required />
+            <label for="Telefono">Teléfono:</label>
+            <input asp-for="Telefono" id="Telefono" name="Telefono" type="text" placeholder="Ingrese 9 dígitos" />
+            <span class="text-danger" data-valmsg-for="Telefono"></span>
         </div>
 
         <div>
-            <label>DNI:</label>
-            <input name="Dni" type="text" maxlength="8" required />
+            <label for="Dni">DNI:</label>
+            <input asp-for="Dni" id="Dni" name="Dni" type="text" placeholder="Ingrese 8 dígitos" />
+            <span class="text-danger" data-valmsg-for="Dni"></span>
         </div>
 
-        <button type="submit">Registrar Empleado</button>
+        <button type="submit">Registrar</button>
     </form>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- SCRIPTS -->
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
 <script>
-    $("#formRegistrarEmpleado").submit(function (e) {
-        e.preventDefault();
+    $(document).ready(function () {
 
-        $.ajax({
-            url: '/Empleado/RegistrarEmpleado',
-            type: 'POST',
-            data: $(this).serialize(),
-            success: function (response) {
-                alert(response.message);
-                if (response.success) {
-                    $("#formRegistrarEmpleado")[0].reset();
+        // Calcular edad automáticamente
+        $("#FechaNacimiento").on("change", function () {
+            const fechaNac = new Date($(this).val());
+            const hoy = new Date();
+            let edad = hoy.getFullYear() - fechaNac.getFullYear();
+            const m = hoy.getMonth() - fechaNac.getMonth();
+            if (m < 0 || (m === 0 && hoy.getDate() < fechaNac.getDate())) edad--;
+            $("#Edad").val(edad > 0 ? edad : "");
+        });
+
+        // Envío AJAX del formulario
+        $("#formRegistrarEmpleado").submit(function (e) {
+            e.preventDefault();
+
+            if (!$(this).valid()) return;
+
+            $.ajax({
+                url: '/Empleado/RegistrarEmpleado',
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function (response) {
+                    if (response.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: '¡Registro exitoso!',
+                            text: response.message,
+                            showConfirmButton: true,
+                            confirmButtonText: 'Aceptar',
+                            confirmButtonColor: '#3085d6',
+                            timer: 4000
+                        });
+                        $("#formRegistrarEmpleado")[0].reset();
+                        $("#Edad").val("");
+                    } else {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'Atención',
+                            text: response.message,
+                            confirmButtonText: 'Entendido',
+                            confirmButtonColor: '#f39c12'
+                        });
+                    }
+                },
+                error: function () {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error del servidor',
+                        text: 'Ocurrió un problema al registrar el empleado.',
+                        confirmButtonColor: '#e74c3c'
+                    });
                 }
-            },
-            error: function () {
-                alert("Error al conectar con el servidor.");
-            }
+            });
         });
     });
 </script>

@@ -1,0 +1,99 @@
+﻿/* === CONTENEDOR NEÓN BRILLANTE AJUSTADO === */
+.neon-form-wrapper {
+    background: rgba(10, 15, 30, 0.4);
+    border: 2px solid rgba(0, 195, 255, 0.5);
+    border-radius: 25px;
+    padding: 50px 60px;
+    margin: 60px auto;
+    box-shadow: 0 0 35px rgba(0, 195, 255, 0.4), inset 0 0 20px rgba(0, 195, 255, 0.2);
+    backdrop-filter: blur(10px);
+    max-width: 950px; /* más ancho */
+    transition: all 0.4s ease;
+    animation: pulseNeon 4s infinite alternate;
+}
+
+/* ANIMACIÓN DEL BORDE AZUL */
+@keyframes pulseNeon {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 195, 255, 0.4), inset 0 0 10px rgba(0, 195, 255, 0.15);
+    }
+
+    100% {
+        box-shadow: 0 0 40px rgba(0, 195, 255, 0.6), inset 0 0 25px rgba(0, 195, 255, 0.3);
+    }
+}
+
+/* === DISTRIBUCIÓN INTERNA DE LOS CAMPOS === */
+.neon-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 40px; /* espacio entre filas y columnas */
+}
+
+    .neon-form-grid .form-group {
+        margin-bottom: 0;
+    }
+
+/* === TITULAR AJUSTADO === */
+.neon-form-wrapper h2 {
+    color: #00b3ff;
+    font-size: 2.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(0, 195, 255, 0.5);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
+}
+
+    .neon-form-wrapper h2::before {
+        content: "⚡💻";
+        font-size: 1.8rem;
+    }
+
+    
+/* ==== BOTÓN ELEGANTE NEÓN AZUL ==== */ .btn-elegante {
+    background: linear-gradient(90deg, #007bff, #00c3ff);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 195, 255, 0.6);
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+    .btn-elegante:hover {
+        transform: translateY(-3px);
+        background: linear-gradient(90deg, #00c3ff, #007bff);
+        box-shadow: 0 0 25px rgba(0, 195, 255, 0.9);
+    }
+
+    .btn-elegante:active {
+        transform: scale(0.97);
+        box-shadow: 0 0 8px rgba(0, 195, 255, 0.7);
+    }
+
+@keyframes brilloAzul {
+    0% {
+        box-shadow: 0 0 10px #007bff, 0 0 20px #00c3ff;
+    }
+
+    50% {
+        box-shadow: 0 0 25px #00c3ff, 0 0 40px #007bff;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #007bff, 0 0 20px #00c3ff;
+    }
+}
+
+.btn-elegante.brillante {
+    animation: brilloAzul 2s infinite alternate;
+}

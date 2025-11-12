@@ -5,6 +5,9 @@
 <link rel="stylesheet" href="~/Estilos/MenuAzul.css" />
 <link rel="stylesheet" href="~/Estilos/MenuLateral.css" />
 <link rel="stylesheet" href="~/Estilos/Reloj.css" />
+<link rel="stylesheet" href="~/Estilos/crearUsuario.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/Estilos/ListarUsuarios.css" />
+<link rel="stylesheet" href="~/Estilos/RegistroEmpleado.css" />
 
 <div id="reloj-fixed" role="timer" aria-live="polite" aria-atomic="true">
     <div id="reloj-inner">
@@ -184,6 +187,39 @@
                 }
             });
         });
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+           
+// Botón Crear Usuario - AJAX
+    $("#btn-crear-usuario").click(function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: '/Account/CrearUsuario',
+            type: 'GET',
+            success: function (result) {
+                $("#dashboard-content").html(result);
+            },
+            error: function () {
+                $("#dashboard-content").html("<p style='color:red;'>Error al cargar el formulario de creación de usuario.</p>");
+            }
+        });
+    });
+
+        $("#btn-listar-usuario").click(function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: '/Account/ListarUsuarios',
+            type: 'GET',
+            success: function (result) {
+                $("#dashboard-content").html(result);
+            },
+            error: function () {
+                $("#dashboard-content").html("<p style='color:red;'>Error al cargar la lista de usuarios.</p>");
+            }
+        });
+    });
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         // Botón Reportes (aquí deberías agregar funcionalidad AJAX para cargar reportes cuando tengas la ruta)
 
@@ -228,5 +264,12 @@
         setInterval(actualizarReloj, 1000);
     })();
 </script>
+
+    
+
+
+
+
+
 
 

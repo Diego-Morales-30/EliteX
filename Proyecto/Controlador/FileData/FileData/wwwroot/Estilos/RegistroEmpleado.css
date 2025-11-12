@@ -1,101 +1,142 @@
-﻿
-/* === ESTILO ELEGANTE REGISTRO EMPLEADO === */
+﻿/* === ESTILO GENERAL === */
 body {
     background-color: #0f1117;
     color: #e0e0e0;
     font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+/* === CONTENEDOR PRINCIPAL === */
 .registro-container {
     width: 90%;
-    max-width: 900px; /* se adapta mejor a pantallas grandes */
+    max-width: 900px;
     margin: 40px auto;
-    background-color: #0b0f1a;
-    border-radius: 20px;
+    background-color: #1b1d27;
+    border-radius: 12px;
     padding: 30px 40px;
-    box-shadow: 0 0 25px rgba(0, 102, 255, 0.3);
-    animation: fadeIn 0.7s ease;
-    box-sizing: border-box;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
-
-    .registro-container h2 {
-        color: #4da3ff;
+    /* === TITULOS === */
+    .registro-container h1, .registro-container h2 {
         text-align: center;
+        color: #00aaff;
         margin-bottom: 30px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        border-bottom: 2px solid #007bff;
-        display: inline-block;
-        padding-bottom: 5px;
     }
 
+/* === FORMULARIO === */
 form {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
 }
 
-/* === INPUT CON EFECTO NEÓN AZUL === */
-label {
-    color: #b0c4de;
-    font-weight: 600;
-    margin-bottom: 4px;
-    display: block;
-    letter-spacing: 0.5px;
-}
-
+/* === INPUTS Y SELECTS === */
 input[type="text"],
 input[type="email"],
+input[type="date"],
 input[type="number"],
-input[type="date"] {
-    width: 100%;
-    padding: 10px 14px;
-    background-color: #101522;
-    border: 2px solid #1b2b45;
-    border-radius: 10px;
+select {
+    background-color: #1b1d27;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 10px 12px;
     color: #e0e0e0;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    box-shadow: inset 0 0 5px rgba(0, 123, 255, 0.2);
+    font-size: 16px;
+    transition: 0.3s;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-input:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
-}
+    /* Efecto al enfocar */
+    input:focus,
+    select:focus {
+        border-color: #00ffff;
+        outline: none;
+        box-shadow: 0 0 8px #00ffff70;
+    }
 
-/* === BOTÓN ELEGANTE === */
-button {
-    background: linear-gradient(90deg, #0044cc, #007bff);
-    border: none;
-    border-radius: 12px;
-    color: #fff;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 12px;
+/* === SELECT PERSONALIZADO === */
+select {
+    appearance: none; /* Oculta la apariencia nativa */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #1b1d27; /* mismo fondo que los inputs */
+    color: #e0e0e0; /* texto en color claro */
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 10px 12px;
+    padding-right: 30px; /* espacio para la flecha */
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
-    letter-spacing: 0.5px;
+    font-size: 16px;
+    transition: 0.3s;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpolygon points='0,0 12,0 6,6' fill='%23e0e0e0'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px 12px;
+}
+
+    select:focus {
+        border-color: #00ffff;
+        box-shadow: 0 0 8px #00ffff70;
+        outline: none;
+    }
+
+}
+
+/* === LABELS === */
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* === BOTONES === */
+button {
+    background-color: #007bff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
     button:hover {
-        background: linear-gradient(90deg, #005cff, #00a2ff);
-        box-shadow: 0 0 20px rgba(0, 153, 255, 0.8);
-        transform: scale(1.03);
+        background-color: #00aaff;
+        box-shadow: 0 4px 15px rgba(0, 170, 255, 0.5);
     }
 
-/* === ANIMACIÓN DE ENTRADA === */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
+/* === MENSAJES DE ERROR === */
+span.error {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 5px;
+}
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* === TABLAS (por si las usas en listado) === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #2c2f3a;
+    text-align: left;
+    color: #e0e0e0;
+}
+
+th {
+    background-color: #1b1d27;
+    color: #00aaff;
+}
+
+tr:nth-child(even) {
+    background-color: #161821;
 }

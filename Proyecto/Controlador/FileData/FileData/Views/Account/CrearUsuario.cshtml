@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Crear Usuario";
+}
+
+<div class="neon-form-wrapper">
+    <h2>Crear Usuario</h2>
+  
+    <div class="login-box">
+        <label for="comboEmpleados">Selecciona Empleado</label>
+        <select id="comboEmpleados" required></select>
+
+        <label for="cargoUsuario">Cargo</label>
+        <input type="text" id="cargoUsuario" placeholder="Ej. Cajero, Administrador..." required />
+
+        <label for="contrasenaUsuario">Contraseña</label>
+        <input type="password" id="contrasenaUsuario" placeholder="Contraseña segura" required />
+
+        <label for="codigoAdmin">Código de administrador</label>
+        <input type="password" id="codigoAdmin" placeholder="Código de validación" required />
+
+        <button id="btnGuardarUsuario" class="btn-elegante brillante">💾Guardar Usuario</button>
+        <div class="extra-info" id="infoCrearUsuario"></div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        // === Cargar empleados ===
+        $.get("/Account/ObtenerEmpleados", function (data) {
+            $("#comboEmpleados").empty().append('<option value="">-- Selecciona un empleado --</option>');
+            data.forEach(e => {
+                $("#comboEmpleados").append(`<option value="${e.idEmpleado}" data-dni="${e.dni}">${e.apellidos}</option>`);
+            });
+        });
+
+        // === Guardar usuario ===
+        $("#btnGuardarUsuario").click(function () {
+            let idEmpleado = $("#comboEmpleados").val();
+            let contrasena = $("#contrasenaUsuario").val().trim();
+            let cargo = $("#cargoUsuario").val().trim();
+            let codigoAdmin = $("#codigoAdmin").val().trim();
+
+            if (!idEmpleado || !contrasena || !cargo || !codigoAdmin)
+                return alert("Por favor completa todos los campos.");
+
+            $("#infoCrearUsuario").html("Creando usuario...");
+
+            $.post("/Account/CrearUsuario",
+                { idEmpleado: idEmpleado, contrasena: contrasena, cargo: cargo, codigoAdmin: codigoAdmin },
+                function (res) {
+                    $("#infoCrearUsuario").html(res.message);
+                    if (res.success) {
+                        $("#comboEmpleados, #cargoUsuario, #contrasenaUsuario, #codigoAdmin").prop("disabled", true);
+                        $("#btnGuardarUsuario").prop("disabled", true);
+                    }
+                }
+            );
+        });
+    });
+</script>

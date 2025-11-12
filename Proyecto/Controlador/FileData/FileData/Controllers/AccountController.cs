@@ -154,7 +154,7 @@ namespace FileData.Controllers
         {
             var empleados = _context.Empleados
                 .Include(e => e.Usuario) // relación 1:1
-                .Where(e => e.Usuario == null) // solo empleados que no tienen usuario aún
+                .Where(e => e.Usuario == null) // solo empleados sin usuario
                 .Select(e => new
                 {
                     idEmpleado = e.IdEmpleado,
@@ -166,15 +166,24 @@ namespace FileData.Controllers
             return Json(empleados);
         }
 
+        // --- VISTA CREAR USUARIO ---
+        [HttpGet]
+        public IActionResult CrearUsuario()
+        {
+            return View();
+        }
+
         // --- CREAR NUEVO USUARIO ---
         [HttpPost]
         public IActionResult CrearUsuario(int idEmpleado, string contrasena, string cargo, string codigoAdmin)
         {
             try
             {
+                // Código de administrador (puede moverse al appsettings.json)
                 if (codigoAdmin != "3003200")
                     return Json(new { success = false, message = "Código de administrador incorrecto." });
 
+                // Validación de contraseña
                 var regex = new Regex(@"^(?=.*[A-Z])(?=.*\d)(?=.*[^\w\d\s]).{8,}$");
                 if (!regex.IsMatch(contrasena))
                     return Json(new
@@ -183,16 +192,19 @@ namespace FileData.Controllers
                         message = "La contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un símbolo especial."
                     });
 
+                // Validación de empleado
                 var empleado = _context.Empleados.FirstOrDefault(e => e.IdEmpleado == idEmpleado);
                 if (empleado == null)
                     return Json(new { success = false, message = "Empleado no encontrado." });
 
                 string nuevoUsuario = "DF" + empleado.Dni;
 
+                // Validación de duplicado
                 var existe = _context.Usuarios.Any(u => u.Usuario1 == nuevoUsuario);
                 if (existe)
                     return Json(new { success = false, message = "Ya existe un usuario para este empleado." });
 
+                // Crear nuevo usuario
                 var nuevo = new Usuario
                 {
                     Usuario1 = nuevoUsuario,
@@ -211,9 +223,26 @@ namespace FileData.Controllers
                 return Json(new { success = false, message = "Error al crear usuario: " + ex.InnerException?.Message });
             }
 
+        }
+        //Listar usuarios.
+        [HttpGet]
+        public IActionResult ListarUsuarios()
+        {
+            var usuarios = _context.Usuarios
+                .Include(u => u.IdEmpleadoNavigation)
+                .Select(u => new
+                {
+                    IdUsuario = u.IdUsuario,
+                    Usuario = u.Usuario1,
+                    Empleado = u.IdEmpleadoNavigation.Nombre + " " + u.IdEmpleadoNavigation.Apellidos,
+                    Cargo = u.Cargo,
+                    Correo = u.IdEmpleadoNavigation.Email
+                })
+                .ToList();
 
+            return PartialView("ListarUsuarios", usuarios);
         }
 
     }
-
 }
+

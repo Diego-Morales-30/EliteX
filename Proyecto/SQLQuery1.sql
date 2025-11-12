@@ -44,6 +44,27 @@ END;
 GO
 
 
+CREATE TABLE Horarios (
+    IdHorario INT IDENTITY(1,1) PRIMARY KEY,
+    IdEmpleado INT NOT NULL,
+    FechaInicio DATE NOT NULL,
+    HoraEntrada TIME(7) NOT NULL,
+    HoraSalida TIME(7) NULL,
+    Observaciones VARCHAR(200) NULL,
+    UsuarioRegistro INT NOT NULL,
+    FechaRegistro DATETIME DEFAULT GETDATE(),
+    
+    CONSTRAINT FK_Horarios_Empleados FOREIGN KEY (IdEmpleado)
+        REFERENCES Empleados(IdEmpleado),
+        
+    CONSTRAINT FK_Horarios_Usuario FOREIGN KEY (UsuarioRegistro)
+        REFERENCES Usuario(IdUsuario),
+
+    -- Evita que un empleado tenga más de un horario con la misma fecha
+    CONSTRAINT UQ_Horario_Unico UNIQUE (IdEmpleado, FechaInicio)
+);
+GO
+
 INSERT INTO Empleados (Nombre, Apellidos, FechaNacimiento, Edad, EstadoCivil, Email, Telefono, DNI)
 VALUES 
 ('Juan', 'Pérez López', '1990-05-12', 35, 'Soltero', 'juan.perez@example.com', '987654321', '12345678'),

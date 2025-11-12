@@ -17,41 +17,49 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FileData
 build_property.RootNamespace = FileData
-build_property.ProjectDir = C:\Users\MIRKO TASSO\OneDrive\Escritorio\ElitexXx\Proyecto\Controlador\FileData\FileData\
+build_property.ProjectDir = C:\Users\Cesar AN\Desktop\Grupo Eliex\Proyecto\Controlador\FileData\FileData\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\MIRKO TASSO\OneDrive\Escritorio\ElitexXx\Proyecto\Controlador\FileData\FileData
+build_property.MSBuildProjectDirectory = C:\Users\Cesar AN\Desktop\Grupo Eliex\Proyecto\Controlador\FileData\FileData
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/MIRKO TASSO/OneDrive/Escritorio/ElitexXx/Proyecto/Controlador/FileData/FileData/Views/Account/Login.cshtml]
+[C:/Users/Cesar AN/Desktop/Grupo Eliex/Proyecto/Controlador/FileData/FileData/Views/Account/CrearUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDcmVhclVzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Cesar AN/Desktop/Grupo Eliex/Proyecto/Controlador/FileData/FileData/Views/Account/ListarUsuarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMaXN0YXJVc3Vhcmlvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Cesar AN/Desktop/Grupo Eliex/Proyecto/Controlador/FileData/FileData/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MIRKO TASSO/OneDrive/Escritorio/ElitexXx/Proyecto/Controlador/FileData/FileData/Views/Actualizar/ActualizarEmpleado.cshtml]
+[C:/Users/Cesar AN/Desktop/Grupo Eliex/Proyecto/Controlador/FileData/FileData/Views/Actualizar/ActualizarEmpleado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0dWFsaXphclxBY3R1YWxpemFyRW1wbGVhZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MIRKO TASSO/OneDrive/Escritorio/ElitexXx/Proyecto/Controlador/FileData/FileData/Views/Empleado/RegistrarEmpleado.cshtml]
+[C:/Users/Cesar AN/Desktop/Grupo Eliex/Proyecto/Controlador/FileData/FileData/Views/Empleado/RegistrarEmpleado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cUmVnaXN0cmFyRW1wbGVhZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MIRKO TASSO/OneDrive/Escritorio/ElitexXx/Proyecto/Controlador/FileData/FileData/Views/Home/ConsultarEmpleado.cshtml]
+[C:/Users/Cesar AN/Desktop/Grupo Eliex/Proyecto/Controlador/FileData/FileData/Views/Home/ConsultarEmpleado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb25zdWx0YXJFbXBsZWFkby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MIRKO TASSO/OneDrive/Escritorio/ElitexXx/Proyecto/Controlador/FileData/FileData/Views/Home/Index.cshtml]
+[C:/Users/Cesar AN/Desktop/Grupo Eliex/Proyecto/Controlador/FileData/FileData/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MIRKO TASSO/OneDrive/Escritorio/ElitexXx/Proyecto/Controlador/FileData/FileData/Views/Home/ListarEmpleado.cshtml]
+[C:/Users/Cesar AN/Desktop/Grupo Eliex/Proyecto/Controlador/FileData/FileData/Views/Home/ListarEmpleado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0YXJFbXBsZWFkby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MIRKO TASSO/OneDrive/Escritorio/ElitexXx/Proyecto/Controlador/FileData/FileData/Views/Horarios/RegistrarHorario.cshtml]
+[C:/Users/Cesar AN/Desktop/Grupo Eliex/Proyecto/Controlador/FileData/FileData/Views/Horarios/RegistrarHorario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb3NcUmVnaXN0cmFySG9yYXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

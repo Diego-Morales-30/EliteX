@@ -1,0 +1,31 @@
+﻿@model IEnumerable<dynamic>
+
+<link rel="stylesheet" href="~/Estilos/ListarUsuarios.css" />
+
+<div class="listar-container">
+    <h2>👥 Lista de Usuarios</h2>
+
+    <table class="tabla-usuarios">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Empleado</th>
+                <th>Usuario</th>
+                <th>Cargo</th>
+                <th>Correo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var u in Model)
+            {
+                <tr>
+                    <td>@u.IdUsuario</td>
+                    <td>@u.Empleado</td>
+                    <td>@u.Usuario</td>
+                    <td>@u.Cargo</td>
+                    <td>@u.Correo</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,65 @@
+﻿body {
+    background-color: #0b0e17;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+}
+
+.listar-container {
+    width: 95%;
+    max-width: 950  px;
+    margin: 30px auto;
+    padding: 25px;
+    background: linear-gradient(145deg, #0d111c, #111624);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 119, 255, 0.25);
+    animation: fadeIn 0.6s ease;
+}
+
+    .listar-container h2 {
+        color: #1e90ff;
+        font-size: 1.8rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 6px;
+    }
+
+.tabla-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .tabla-usuarios th {
+        background: linear-gradient(90deg, #0044cc, #007bff);
+        color: white;
+        text-align: left;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .tabla-usuarios td {
+        padding: 12px;
+        border-bottom: 1px solid #1e2a44;
+    }
+
+    .tabla-usuarios tr:hover {
+        background-color: rgba(0, 123, 255, 0.1);
+        transition: 0.2s;
+    }
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
