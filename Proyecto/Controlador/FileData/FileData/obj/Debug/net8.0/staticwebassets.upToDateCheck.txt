@@ -3,7 +3,6 @@ wwwroot\Estilos\DashConsultar.css
 wwwroot\Estilos\DashListar.css
 wwwroot\Estilos\estilos-horario.css
 wwwroot\Estilos\Estilos.css
-wwwroot\Estilos\MenuAzul.css
 wwwroot\Estilos\MenuLateral.css
 wwwroot\Estilos\RegistroEmpleado.css
 wwwroot\favicon.ico
@@ -65,3 +64,5 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\Estilos\MenuAzul.css
+wwwroot\Estilos\EliminarEmpleado.css

@@ -167,11 +167,88 @@
         font-weight: 700;
         margin-left: 12px;
     }
+
+    .btn-eliminar {
+        background-color: #c0392b;
+        color: #fff;
+        border: none;
+        padding: 5px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+        .btn-eliminar:hover {
+            background-color: #e74c3c;
+        }
+
+    .modal-confirmacion {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(15, 15, 30, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    .modal-contenido {
+        background: #1e2a38;
+        color: white;
+        padding: 25px 35px;
+        border-radius: 12px;
+        text-align: center;
+        width: 380px;
+    }
+
+        .modal-contenido h3 {
+            margin-bottom: 10px;
+        }
+
+        .modal-contenido p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .modal-contenido .acciones {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+    .btn-confirmar {
+        background: #d9534f;
+        border: none;
+        color: white;
+        padding: 8px 18px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+        .btn-confirmar:hover {
+            background: #c9302c;
+        }
+
+    .btn-cancelar {
+        background: #6c757d;
+        border: none;
+        color: white;
+        padding: 8px 18px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+        .btn-cancelar:hover {
+            background: #5a6268;
+        }
+
 </style>
 
 <script>
     $(document).ready(function () {
-        // Guardar el HTML inicial del contenedor para poder restaurarlo al cancelar
         var htmlInicial = $("#resultadoEmpleado").html();
 
         $("#btnBuscar").click(function () {
@@ -182,23 +259,19 @@
 
             $.post("/Consultar/BuscarEmpleado", { filtro: filtro }, function (res) {
                 $("#resultadoEmpleado").html(res);
-                // Añadimos (si no están) los botones actualizar
                 agregarBotonesActualizar();
             }).fail(function () {
                 $("#resultadoEmpleado").html("<p>Error al buscar empleado.</p>");
             });
         });
 
-        // Función que agrega botones y los vincula
         function agregarBotonesActualizar() {
-            // Buscamos bloques de empleado: heurística por h3
             $("#resultadoEmpleado").find("div").each(function () {
                 var $block = $(this);
                 if ($block.find("h3").length === 0) return;
-                if ($block.find(".btn-actualizar").length) return; // ya tiene
+                if ($block.find(".btn-actualizar").length) return;
 
                 var id = null;
-                // Extraer ID desde párrafo que contenga "ID" (insensible)
                 $block.find("p").each(function () {
                     var t = $(this).text().replace(/\s+/g, " ").trim();
                     var m = t.match(/(?:\bID\b|\bId\b|identificador|identifica|id)\s*[:\s]*([0-9]+)/i);
@@ -208,38 +281,85 @@
                     }
                 });
                 if (!id) {
-                    // fallback: primer número en el bloque
                     var fallback = $block.text().match(/\b([0-9]{1,6})\b/);
                     if (fallback) id = fallback[1];
                 }
                 if (!id) return;
 
-                var $btn = $('<button type="button" class="btn-actualizar">Actualizar</button>');
-                $btn.on("click", function () {
+                var $btnActualizar = $('<button type="button" class="btn-actualizar">Actualizar</button>');
+                $btnActualizar.on("click", function () {
                     abrirModalConDatosDesdeBloque($block, id);
                 });
 
-                // Insertar al lado del h3 o al final del bloque
+                // === NUEVO: Botón eliminar ===
+                var $btnEliminar = $('<button type="button" class="btn-eliminar">Eliminar</button>');
+                $btnEliminar.on("click", function () {
+                    mostrarConfirmacionEliminar(id);
+                });
+
                 if ($block.find("h3").length) {
                     var $h3 = $block.find("h3").first();
                     if (!$h3.parent().hasClass("h3-with-btn")) {
                         $h3.wrap('<div class="h3-with-btn" style="display:flex;align-items:center;justify-content:space-between;"></div>');
                     }
-                    $h3.parent().append($btn);
+
+                    // Contenedor para ambos botones
+                    var $btnContainer = $('<div style="display:flex;gap:8px;"></div>');
+                    $btnContainer.append($btnActualizar, $btnEliminar);
+                    $h3.parent().append($btnContainer);
                 } else {
-                    $block.append($btn);
+                    $block.append($btnActualizar, $btnEliminar);
                 }
             });
         }
 
-        // Abre modal y rellena campos extrayendo los valores desde el bloque HTML
-        function abrirModalConDatosDesdeBloque($block, id) {
-            // Poner id
-            $("#IdEmpleado").val(id);
+        // === NUEVO: Ventana emergente de confirmación ===
+            function mostrarConfirmacionEliminar(id) {
+        const modal = $(`
+            <div class="modal-confirmacion">
+                <div class="modal-contenido">
+                    <div class="icono-eliminar">⚠️</div>
+                    <h3>¿Deseas eliminar este empleado?</h3>
+                    <p>Esta acción es permanente y no se puede deshacer.</p>
+                    <div class="acciones">
+                        <button id="confirmarEliminar" class="btn-confirmar">Sí, eliminar</button>
+                        <button id="cancelarEliminar" class="btn-cancelar">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        `);
 
-            // Nombre desde h3 (nombre completo)
+        $("body").append(modal);
+        modal.hide().fadeIn(200);
+
+        $("#cancelarEliminar").on("click", function () {
+            modal.fadeOut(150, function () { modal.remove(); });
+        });
+
+        $("#confirmarEliminar").on("click", function () {
+            $.ajax({
+                url: '/EliminaEmpleado/EliminarEmpleadoConfirmado',
+                type: 'POST',
+                data: { id: id },
+                success: function (res) {
+                    modal.fadeOut(150, function () { modal.remove(); });
+                    alert(res.message || "Empleado eliminado correctamente.");
+                    $("#btnBuscar").click(); // Refresca la lista
+                },
+                error: function () {
+                    modal.fadeOut(150, function () { modal.remove(); });
+                    alert("Error al intentar eliminar el empleado.");
+                }
+            });
+        });
+    }
+
+
+        // === FIN DE LA NUEVA FUNCIÓN ===
+
+        function abrirModalConDatosDesdeBloque($block, id) {
+            $("#IdEmpleado").val(id);
             var nombreCompleto = $block.find("h3").first().text().trim();
-            // Si quieres separar Nombre/Apellidos por espacio (primera palabra nombre y resto apellidos)
             var partes = nombreCompleto.split(" ");
             if (partes.length >= 2) {
                 $("#Nombre").val(partes[0]);
@@ -249,14 +369,11 @@
                 $("#Apellidos").val("");
             }
 
-            // Buscamos los <p> para extraer campos por etiqueta
             var texto = "";
             $block.find("p").each(function () {
                 var t = $(this).text().replace(/\s+/g, " ").trim();
                 texto += t + "||";
-                // extraemos por prefijo
                 if (/fecha nacimiento/i.test(t)) {
-                    // extraer números día mes año
                     var m = t.match(/(\d{1,2})\D+(\d{1,2})\D+(\d{2,4})/);
                     if (m) {
                         var dd = m[1].padStart(2, '0');
@@ -264,7 +381,6 @@
                         var yyyy = m[3].length === 2 ? ('20' + m[3]) : m[3];
                         $("#FechaNacimiento").val(yyyy + "-" + mm + "-" + dd);
                     } else {
-                        // si no detecta, limpia
                         $("#FechaNacimiento").val("");
                     }
                 } else if (/edad/i.test(t)) {
@@ -282,36 +398,27 @@
                 } else if (/dni/i.test(t)) {
                     var v = t.split(":");
                     $("#Dni").val(v.length > 1 ? v.slice(1).join(":").trim() : "");
-                } else if (/id[:\s]/i.test(t)) {
-                    // ya lo tenemos en hidden
                 }
             });
 
-            // Mostrar modal
             $("#modalActualizar").fadeIn(150);
-            // scroll al modal (opcional)
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Cerrar modal: limpiar y restaurar vista inicial
         function cerrarModalYRestaurar() {
             $("#modalActualizar").fadeOut(120);
-            // vaciar campos
             $("#formActualizarInline")[0].reset();
-            // restaurar la vista de consultar a su estado inicial
             $("#txtBuscar").val("");
             $("#resultadoEmpleado").html('<p>Ingrese un filtro y presione "Buscar" para ver los empleados.</p>');
         }
 
-        // Botones cancelar/cerrar
         $("#btnCancelarModal, #cerrarModal").on("click", function () {
             cerrarModalYRestaurar();
         });
 
-        // Envío por AJAX del formulario inline
         $("#formActualizarInline").on("submit", function (e) {
             e.preventDefault();
-            var data = $(this).serialize(); // envia como application/x-www-form-urlencoded
+            var data = $(this).serialize();
 
             $(".btn-guardar-actualizar").prop("disabled", true);
 
@@ -322,7 +429,6 @@
                 success: function (res) {
                     if (res && res.success) {
                         alert(res.message || "Actualizado correctamente.");
-                        // cerrar modal y limpiar resultado
                         cerrarModalYRestaurar();
                     } else {
                         alert(res.message || "No se pudo actualizar. Revise los datos.");
@@ -337,7 +443,6 @@
             });
         });
 
-        // Si ya había resultados inyectados por la carga inicial, añadimos botones
         agregarBotonesActualizar();
     });
 </script>

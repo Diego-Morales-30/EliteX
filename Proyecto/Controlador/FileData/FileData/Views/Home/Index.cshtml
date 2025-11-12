@@ -37,6 +37,7 @@
                 <a href="#" class="submenu-item" id="btn-listar-empleados">Listar Empleados</a>
                 <a href="#" class="submenu-item" id="btn-crear-empleado">Registrar Empleado</a>
                 <a href="#" class="submenu-item" id="btn-consultar-empleado">Consultar Empleado</a>
+                <a href="#" class="submenu-item" id="btn-eliminar-empleado">Eliminar Empleado</a>
             </div>
 
             <!-- Menú Usuarios -->
@@ -159,6 +160,23 @@
                 }
             });
         });
+
+    // Botón Eliminar Empleado - AJAX
+    $("#btn-eliminar-empleado").click(function (e) {
+        e.preventDefault();
+    $.ajax({
+        url: '/EliminaEmpleado/EliminarEmpleado',
+        type: 'GET',
+        success: function (result) {
+            $("#dashboard-content").html(result);
+        },
+        error: function () {
+            $("#dashboard-content").html("<p style='color:red;'>Error al cargar la vista de eliminación de empleados.</p>");
+        }
+    });
+    });
+
+
 
         // Botón Horarios - AJAX
         $("#btn-horarios").click(function (e) {

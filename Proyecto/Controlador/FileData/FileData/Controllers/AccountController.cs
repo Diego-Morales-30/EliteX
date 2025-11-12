@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 using System.Net.Mail;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Text.RegularExpressions;
 
 namespace FileData.Controllers
@@ -49,10 +52,31 @@ namespace FileData.Controllers
             }
 
             if (accion == "acceder")
-                return RedirectToAction("Index", "Home");
+            {
+                // Crear claims y autenticación con cookies
+                var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, user.Usuario1),
+            new Claim("IdUsuario", user.IdUsuario.ToString())
+        };
 
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                var authProperties = new AuthenticationProperties
+                {
+                    IsPersistent = true,
+                    ExpiresUtc = DateTimeOffset.UtcNow.AddHours(4)
+                };
+
+
+
+                return RedirectToAction("Index", "Home");
+            }
+
+            // 🔹 Si llega aquí, por seguridad devolvemos la vista
             return View();
         }
+
 
         // --- ENVIAR CÓDIGO DE VERIFICACIÓN ---
         [HttpPost]

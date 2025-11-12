@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Eliminar Empleado - EliteX";
+}
+
+<link rel="stylesheet" href="~/Estilos/EliminarEmpleado.css" />
+
+<div class="eliminar-container">
+    <h2>🗑️ Eliminar Empleado</h2>
+
+    <div class="buscar-section">
+        <label for="dni">DNI del empleado:</label>
+        <input type="text" id="dni" maxlength="8" placeholder="Ej: 72345678" />
+        <button id="btnBuscar">Buscar</button>
+    </div>
+
+    <div id="empleado-info" style="display:none;">
+        <h3>Datos del Empleado</h3>
+        <table>
+            <tr><th>Nombre:</th><td id="nombre"></td></tr>
+            <tr><th>Apellidos:</th><td id="apellidos"></td></tr>
+            <tr><th>Email:</th><td id="email"></td></tr>
+            <tr><th>Teléfono:</th><td id="telefono"></td></tr>
+            <tr><th>Edad:</th><td id="edad"></td></tr>
+            <tr><th>Estado Civil:</th><td id="estadoCivil"></td></tr>
+            <tr><th>Usuario:</th><td id="usuario"></td></tr>
+        </table>
+        <button id="btnEliminar" class="btn-eliminar">Eliminar Empleado</button>
+    </div>
+
+    <div id="mensaje" class="mensaje"></div>
+</div>
+
+<!-- Modal de confirmación -->
+<div id="modalConfirm" class="modal">
+    <div class="modal-content">
+        <h3>¿Eliminar empleado?</h3>
+        <p>Esta acción también eliminará su usuario y horarios asociados.</p>
+        <div class="modal-buttons">
+            <button id="confirmYes" class="btn-confirm">Sí, eliminar</button>
+            <button id="confirmNo" class="btn-cancel">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        let empleadoId = null;
+
+        // Buscar empleado por DNI
+        $("#btnBuscar").click(function () {
+            const dni = $("#dni").val().trim();
+            if (dni === "") {
+                $("#mensaje").text("Ingrese un DNI válido.").css("color", "#ff4c4c");
+                return;
+            }
+
+            $.ajax({
+                url: '/EliminaEmpleado/BuscarEmpleado',
+                type: 'GET',
+                data: { dni },
+                success: function (res) {
+                    if (res.success) {
+                        const e = res.data;
+                        empleadoId = e.idEmpleado;
+                        $("#empleado-info").fadeIn(300);
+                        $("#nombre").text(e.nombre);
+                        $("#apellidos").text(e.apellidos);
+                        $("#email").text(e.email);
+                        $("#telefono").text(e.telefono);
+                        $("#edad").text(e.edad);
+                        $("#estadoCivil").text(e.estadoCivil);
+                        $("#usuario").text(e.usuario);
+                        $("#mensaje").text("");
+                    } else {
+                        $("#empleado-info").hide();
+                        $("#mensaje").text(res.message).css("color", "#ff4c4c");
+                    }
+                },
+                error: function () {
+                    $("#mensaje").text("Error al buscar empleado.").css("color", "#ff4c4c");
+                }
+            });
+        });
+
+        // Mostrar modal al hacer clic en eliminar
+        $("#btnEliminar").click(function () {
+            $("#modalConfirm").fadeIn(200).css("display", "flex");
+        });
+
+        // Confirmar eliminación
+        $("#confirmYes").click(function () {
+            $("#modalConfirm").fadeOut(200);
+            if (empleadoId) {
+                $.ajax({
+                    url: '/EliminaEmpleado/EliminarEmpleadoConfirmado',
+                    type: 'POST',
+                    data: { id: empleadoId },
+                    success: function (res) {
+                        if (res.success) {
+                            $("#mensaje").text(res.message).css("color", "#00ff99");
+                            $("#empleado-info").fadeOut(300);
+                            $("#dni").val("");
+                        } else {
+                            $("#mensaje").text(res.message).css("color", "#ff4c4c");
+                        }
+                    },
+                    error: function () {
+                        $("#mensaje").text("Error al intentar eliminar el empleado.").css("color", "#ff4c4c");
+                    }
+                });
+            }
+        });
+
+        // Cancelar eliminación
+        $("#confirmNo").click(function () {
+            $("#modalConfirm").fadeOut(200);
+        });
+    });
+</script>
