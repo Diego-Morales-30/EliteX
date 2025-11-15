@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="~/Estilos/crearUsuario.css" asp-append-version="true" />
 <link rel="stylesheet" href="~/Estilos/ListarUsuarios.css" />
 <link rel="stylesheet" href="~/Estilos/RegistroEmpleado.css" />
-
+<link rel="stylesheet" href="~/Estilos/DashConsultar.css" /> <!-- Añadido para Consultar vistas -->
+<!-- Reloj fijo -->
 <div id="reloj-fixed" role="timer" aria-live="polite" aria-atomic="true">
     <div id="reloj-inner">
         <div id="reloj-time">
@@ -18,6 +19,7 @@
         <div id="reloj-date">—</div>
     </div>
 </div>
+
 <div class="menu-container">
     <header class="menu-header">
         <div class="menu-logo">ELITEX</div>
@@ -143,7 +145,7 @@
             });
         });
 
-        // Botón Actualizar Empleado - AJAX
+        // Botón Actualizar Empleado - AJAX (si existe)
         $("#btn-actualizar-empleado").click(function (e) {
             e.preventDefault();
             $.ajax({
@@ -187,39 +189,51 @@
                 }
             });
         });
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-           
-// Botón Crear Usuario - AJAX
-    $("#btn-crear-usuario").click(function (e) {
-        e.preventDefault();
-        $.ajax({
-            url: '/Account/CrearUsuario',
-            type: 'GET',
-            success: function (result) {
-                $("#dashboard-content").html(result);
-            },
-            error: function () {
-                $("#dashboard-content").html("<p style='color:red;'>Error al cargar el formulario de creación de usuario.</p>");
-            }
-        });
-    });
 
+        // Botón Crear Usuario - AJAX
+        $("#btn-crear-usuario").click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '/Account/CrearUsuario',
+                type: 'GET',
+                success: function (result) {
+                    $("#dashboard-content").html(result);
+                },
+                error: function () {
+                    $("#dashboard-content").html("<p style='color:red;'>Error al cargar el formulario de creación de usuario.</p>");
+                }
+            });
+        });
+
+        // Botón Listar Usuarios - AJAX
         $("#btn-listar-usuario").click(function (e) {
-        e.preventDefault();
-        $.ajax({
-            url: '/Account/ListarUsuarios',
-            type: 'GET',
-            success: function (result) {
-                $("#dashboard-content").html(result);
-            },
-            error: function () {
-                $("#dashboard-content").html("<p style='color:red;'>Error al cargar la lista de usuarios.</p>");
-            }
+            e.preventDefault();
+            $.ajax({
+                url: '/Account/ListarUsuarios',
+                type: 'GET',
+                success: function (result) {
+                    $("#dashboard-content").html(result);
+                },
+                error: function () {
+                    $("#dashboard-content").html("<p style='color:red;'>Error al cargar la lista de usuarios.</p>");
+                }
+            });
         });
-    });
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // Botón Consultar Usuario - AJAX (nuevo, similar a Consultar Empleado)
+        $("#btn-consultar-usuario").click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '/ConsultarUsuario/ConsultarUsuario',
+                type: 'GET',
+                success: function (result) {
+                    $("#dashboard-content").html(result);
+                },
+                error: function () {
+                    $("#dashboard-content").html("<p style='color:red;'>Error al cargar la consulta de usuarios.</p>");
+                }
+            });
+        });
 
         // Botón Reportes (aquí deberías agregar funcionalidad AJAX para cargar reportes cuando tengas la ruta)
 
@@ -234,6 +248,7 @@
         });
     });
 </script>
+
 <script>
     (function () {
         const hmEl = document.getElementById('reloj-hm');
@@ -264,12 +279,3 @@
         setInterval(actualizarReloj, 1000);
     })();
 </script>
-
-    
-
-
-
-
-
-
-

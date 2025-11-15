@@ -1,0 +1,34 @@
+﻿@model IEnumerable<FileData.Models.Usuario>
+
+<link rel="stylesheet" href="~/Estilos/DashConsultar.css" />
+
+<div class="tabla-consultar-container">
+    <h1 class="titulo-consultar">🔎 Consultar Usuario</h1>
+
+    <div class="buscar-container">
+        <input type="text" id="txtBuscarUsuario" class="input-buscar"
+               placeholder="Ingrese ID, usuario o nombre completo del empleado asociado" />
+        <button id="btnBuscarUsuario" class="btn-buscar">Buscar</button>
+    </div>
+
+    <div id="resultadoUsuario" class="resultado-empleado">
+        <p>Ingrese un filtro y presione "Buscar" para ver los usuarios.</p>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#btnBuscarUsuario").click(function () {
+            let filtro = $("#txtBuscarUsuario").val().trim();
+            if (filtro === "") return alert("Ingrese un criterio de búsqueda.");
+
+            $("#resultadoUsuario").html("Buscando...");
+
+            $.post("/ConsultarUsuario/BuscarUsuario", { filtro: filtro }, function (res) {
+                $("#resultadoUsuario").html(res);
+            }).fail(function () {
+                $("#resultadoUsuario").html("<p style='color:red;'>Error al buscar usuarios.</p>");
+            });
+        });
+    });
+</script>
