@@ -86,14 +86,17 @@
     }
 
     .modal-content-actualizar {
-        width: 760px;
-        max-width: 98%;
+        width: 620px; /* antes: 760px */
+        max-width: 90%; /* un poco más angosto en pantallas chicas */
+        max-height: 90vh; /* no ocupa toda la altura */
+        overflow-y: auto; /* si se llena, agrega scroll interno */
         background: #0f1624;
         border-radius: 12px;
         padding: 22px;
         box-shadow: 0 8px 40px rgba(0,0,0,0.6);
         color: #e6eef8;
     }
+
 
     .modal-header-actualizar {
         display: flex;

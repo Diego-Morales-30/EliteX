@@ -1,5 +1,6 @@
 wwwroot\Estilos\crearUsuario.css
 wwwroot\Estilos\DashActualizar.css
+wwwroot\Estilos\DashConsultar.css
 wwwroot\Estilos\DashListar.css
 wwwroot\Estilos\estilos-horario.css
 wwwroot\Estilos\Estilos.css
@@ -67,4 +68,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\Estilos\DashConsultar.css
