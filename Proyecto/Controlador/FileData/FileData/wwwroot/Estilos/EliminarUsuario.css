@@ -1,0 +1,167 @@
+﻿/* CONTENEDOR GENERAL (card oscura estilo consultar usuario) */
+.contenedor-eliminar-usuario {
+    background-color: #050816; /* igual que las otras cards */
+    padding: 20px 24px;
+    border-radius: 20px;
+    max-width: 1100px;
+    margin: 10px auto;
+    box-shadow: 0 0 35px rgba(15, 23, 42, 0.9);
+    border: 1px solid #1d4ed8; /* borde azul como la línea exterior */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #e5e7eb;
+    /* Animación de entrada */
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+    animation: vistaFadeIn 0.45s ease-out forwards;
+}
+
+    /* TÍTULO Y TEXTO – mismos colores que Consultar Usuario */
+    .contenedor-eliminar-usuario h2 {
+        margin: 0 0 6px 0;
+        font-size: 24px;
+        font-weight: 700;
+        color: #00b3ff; /* celeste intenso */
+        text-shadow: 0 0 10px rgba(0, 179, 255, 0.5); /* glow suave */
+        padding-bottom: 8px;
+        border-bottom: 2px solid rgba(0, 179, 255, 0.5); /* la “línea” bajo el título */
+    }
+
+    .contenedor-eliminar-usuario p {
+        margin: 0 0 16px 0;
+        font-size: 14px;
+        color: #cbd5f5; /* gris clarito como en consultar */
+    }
+
+/* TABLA */
+.tabla-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 14px;
+}
+
+    /* Encabezado azul igual a tus otras tablas */
+    .tabla-usuarios thead {
+        background: linear-gradient(90deg, #1d4ed8, #2563eb, #0ea5e9);
+        color: #ffffff;
+    }
+
+    .tabla-usuarios th,
+    .tabla-usuarios td {
+        padding: 10px 12px;
+        text-align: left;
+        border-bottom: 1px solid #111827;
+        vertical-align: middle;
+    }
+
+    /* Filas cuerpo: oscuras + animación suave */
+    .tabla-usuarios tbody tr {
+        background-color: #020617;
+        opacity: 0;
+        transform: translateY(6px);
+        animation: rowFadeIn 0.35s ease-out forwards;
+    }
+
+        .tabla-usuarios tbody tr:nth-child(even) {
+            background-color: #030712;
+        }
+
+        /* Cascada ligera para las filas */
+        .tabla-usuarios tbody tr:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+
+        .tabla-usuarios tbody tr:nth-child(2) {
+            animation-delay: 0.09s;
+        }
+
+        .tabla-usuarios tbody tr:nth-child(3) {
+            animation-delay: 0.13s;
+        }
+
+        .tabla-usuarios tbody tr:nth-child(4) {
+            animation-delay: 0.17s;
+        }
+
+        .tabla-usuarios tbody tr:hover {
+            background-color: #0b1120;
+            transition: background-color 0.18s ease-in-out;
+        }
+
+    .tabla-usuarios td {
+        color: #e5e7eb;
+    }
+
+/* BOTÓN ELIMINAR – lo dejamos igual, solo colores ajustados al rojo neón */
+.btn-eliminar-usuario {
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+    color: #ffffff;
+    box-shadow: 0 3px 10px rgba(248, 113, 113, 0.6);
+    transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.15s ease;
+}
+
+    .btn-eliminar-usuario:hover {
+        filter: brightness(1.05);
+        transform: translateY(-1px);
+        box-shadow: 0 5px 12px rgba(248, 113, 113, 0.7);
+    }
+
+    .btn-eliminar-usuario:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 6px rgba(248, 113, 113, 0.5);
+    }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contenedor-eliminar-usuario {
+        padding: 16px;
+        margin: 6px;
+    }
+
+    .tabla-usuarios {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+        .tabla-usuarios th,
+        .tabla-usuarios td {
+            padding: 8px 10px;
+        }
+
+    .btn-eliminar-usuario {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+/* ANIMACIONES */
+@keyframes vistaFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes rowFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

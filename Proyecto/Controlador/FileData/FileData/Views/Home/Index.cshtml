@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="~/Estilos/ListarUsuarios.css" />
 <link rel="stylesheet" href="~/Estilos/RegistroEmpleado.css" />
 <link rel="stylesheet" href="~/Estilos/DashConsultar.css" /> <!-- Añadido para Consultar vistas -->
+
 <!-- Reloj fijo -->
 <div id="reloj-fixed" role="timer" aria-live="polite" aria-atomic="true">
     <div id="reloj-inner">
@@ -66,6 +67,7 @@
                 <a href="#" class="submenu-item" id="btn-listar-usuario">Listar Usuarios</a>
                 <a href="#" class="submenu-item" id="btn-crear-usuario">Crear Usuario</a>
                 <a href="#" class="submenu-item" id="btn-consultar-usuario">Consultar Usuario</a>
+                <a href="#" class="submenu-item" id="btn-eliminar-usuario">Eliminar Usuario</a>
             </div>
 
             <!-- Fila 3 -->
@@ -90,6 +92,8 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
     $(document).ready(function () {
         // Toggle submenú Empleados con animación
@@ -220,7 +224,7 @@
             });
         });
 
-        // Botón Consultar Usuario - AJAX (nuevo, similar a Consultar Empleado)
+        // Botón Consultar Usuario - AJAX
         $("#btn-consultar-usuario").click(function (e) {
             e.preventDefault();
             $.ajax({
@@ -235,16 +239,61 @@
             });
         });
 
-        // Botón Reportes (aquí deberías agregar funcionalidad AJAX para cargar reportes cuando tengas la ruta)
-
-        // Botón Configuración (idem para configuración)
-
         // Botón Salir
         $("#btn-salir").click(function (e) {
             e.preventDefault();
             if (confirm("¿Está seguro que desea salir?")) {
                 window.location.href = '/Home/Logout';
             }
+        });
+
+        // 🔹 Cargar módulo "Eliminar Usuario" en el dashboard
+        $('#btn-eliminar-usuario').click(function (e) {
+            e.preventDefault();
+            $('#dashboard-content').load('/Usuario/Eliminar');
+        });
+
+        // 🔹 Manejar clic en los botones "Eliminar usuario" dentro de la tabla cargada
+        //     Usamos delegación porque la tabla se carga dinámicamente
+        $(document).on('click', '.btn-eliminar-usuario', function () {
+            var fila = $(this).closest('tr');
+            var idUsuario = fila.data('id');
+
+            Swal.fire({
+                title: '¿Eliminar usuario?',
+                text: 'Solo se eliminará la cuenta de usuario. El empleado se mantiene.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Continuar',
+                cancelButtonText: 'Cancelar'
+            }).then(function (result) {
+                if (result.isConfirmed) {
+
+                    // Tomamos el token antifalsificación del form oculto de la vista Usuario/Eliminar
+                    var token = $('#form-eliminar-usuario input[name="__RequestVerificationToken"]').val();
+
+                    $.ajax({
+                        url: '@Url.Action("EliminarConfirmado", "Usuario")',
+                        type: 'POST',
+                        data: {
+                            id: idUsuario,
+                            __RequestVerificationToken: token
+                        },
+                        success: function (resp) {
+                            if (resp.success) {
+                                fila.remove();
+                                Swal.fire('Hecho', resp.message, 'success');
+                            } else {
+                                Swal.fire('Aviso', resp.message, 'info');
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.log('Error AJAX:', status, error);
+                            Swal.fire('Error', 'Ocurrió un error al eliminar el usuario.', 'error');
+                        }
+                    });
+                }
+            });
         });
     });
 </script>
@@ -264,8 +313,8 @@
             const ss = pad(now.getSeconds());
 
             // Día y mes cortos
-            const dias = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
-            const meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+            const dias = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+            const meses = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
             const fecha = `${dias[now.getDay()]} ${pad(now.getDate())} ${meses[now.getMonth()]} ${now.getFullYear()}`;
 
             // Actualizar DOM (no tocamos transform ni estilo)

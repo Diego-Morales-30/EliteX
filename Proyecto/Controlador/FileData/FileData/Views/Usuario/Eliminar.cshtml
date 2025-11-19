@@ -1,0 +1,89 @@
+﻿@model IEnumerable<FileData.Models.Usuario>
+
+@{
+    Layout = null; // porque la cargas dentro del dashboard por AJAX
+}
+<link rel="stylesheet" href="~/Estilos/EliminarUsuario.css" />
+
+<div class="contenedor-eliminar-usuario">
+    <h2>👤🗑️ Eliminar usuario</h2>
+    <p>Solo se eliminará la cuenta de usuario, el empleado asociado se mantiene.</p>
+
+    <table class="tabla-usuarios" id="tabla-usuarios">
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Empleado</th>
+                <th>Cargo</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var u in Model)
+            {
+                <tr data-id="@u.IdUsuario">
+                    <td>@u.Usuario1</td>
+                    <td>
+                        @u.IdEmpleadoNavigation?.Nombre @u.IdEmpleadoNavigation?.Apellidos
+                    </td>
+                    <td>@u.Cargo</td> @* si tu modelo tiene Cargo *@
+                    <td>
+                        <button type="button" class="btn-eliminar-usuario">
+                            Eliminar usuario
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@* Form oculto solo para obtener el AntiForgeryToken *@
+<form id="form-eliminar-usuario" asp-controller="Usuario" asp-action="EliminarConfirmado" method="post">
+    @Html.AntiForgeryToken()
+</form>
+
+<script>
+    // Asegúrate de tener jQuery y SweetAlert2 referenciados en tu layout principal
+
+    $(document).on('click', '.btn-eliminar-usuario', function () {
+        var fila = $(this).closest('tr');
+        var idUsuario = fila.data('id');
+
+        Swal.fire({
+            title: '¿Eliminar usuario?',
+            text: 'Solo se eliminará la cuenta de usuario. El empleado se mantiene.',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Continuar',
+            cancelButtonText: 'Cancelar'
+        }).then(function (result) {
+            if (result.isConfirmed) {
+
+                // Token antifalsificación desde el form oculto
+                var token = $('#form-eliminar-usuario input[name="__RequestVerificationToken"]').val();
+
+                $.ajax({
+                    url: '@Url.Action("EliminarConfirmado", "Usuario")',
+                    type: 'POST',
+                    data: {
+                        id: idUsuario,
+                        __RequestVerificationToken: token
+                    },
+                    success: function (resp) {
+                        if (resp.success) {
+                            // Quitamos la fila de la tabla
+                            fila.remove();
+                            Swal.fire('Hecho', resp.message, 'success');
+                        } else {
+                            Swal.fire('Aviso', resp.message, 'info');
+                        }
+                    },
+                    error: function () {
+                        Swal.fire('Error', 'Ocurrió un error al eliminar el usuario.', 'error');
+                    }
+                });
+            }
+        });
+    });
+</script>
