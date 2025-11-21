@@ -27,23 +27,6 @@ CREATE TABLE Usuario (
 );
 GO
 
-CREATE TRIGGER TRG_AutoUsuario
-ON Usuario
-INSTEAD OF INSERT
-AS
-BEGIN
-    INSERT INTO Usuario (Usuario, Contrasena, Cargo, IdEmpleado)
-    SELECT 
-        'DT' + e.DNI,   
-        i.Contrasena,
-        i.Cargo,
-        i.IdEmpleado
-    FROM inserted i
-    INNER JOIN Empleados e ON i.IdEmpleado = e.IdEmpleado;
-END;
-GO
-
-
 CREATE TABLE Horarios (
     IdHorario INT IDENTITY(1,1) PRIMARY KEY,
     IdEmpleado INT NOT NULL,
@@ -60,16 +43,16 @@ CREATE TABLE Horarios (
     CONSTRAINT FK_Horarios_Usuario FOREIGN KEY (UsuarioRegistro)
         REFERENCES Usuario(IdUsuario),
 
-    -- Evita que un empleado tenga m·s de un horario con la misma fecha
+    -- Evita que un empleado tenga m√°s de un horario con la misma fecha
     CONSTRAINT UQ_Horario_Unico UNIQUE (IdEmpleado, FechaInicio)
 );
 GO
 
 INSERT INTO Empleados (Nombre, Apellidos, FechaNacimiento, Edad, EstadoCivil, Email, Telefono, DNI)
 VALUES 
-('Juan', 'PÈrez LÛpez', '1990-05-12', 35, 'Soltero', 'juan.perez@example.com', '987654321', '12345678'),
-('MarÌa', 'GÛmez Ruiz', '1988-09-22', 37, 'Casada', 'maria.gomez@example.com', '912345678', '87654321'),
-('Luis', 'Fern·ndez DÌaz', '1995-03-10', 30, 'Soltero', 'luis.fernandez@example.com', '934567890', '11223344');
+('Juan', 'P√©rez L√≥pez', '1990-05-12', 35, 'Soltero', 'juan.perez@example.com', '987654321', '12345678'),
+('Mar√≠a', 'G√≥mez Ruiz', '1988-09-22', 37, 'Casada', 'maria.gomez@example.com', '912345678', '87654321'),
+('Luis', 'Fern√°ndez D√≠az', '1995-03-10', 30, 'Soltero', 'luis.fernandez@example.com', '934567890', '11223344');
 
 
 INSERT INTO Usuario (Contrasena, Cargo, IdEmpleado)
